@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaflet KML Example</title>
+    <title>Leaflet JSON Example</title>
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- Leaflet JavaScript -->
@@ -32,62 +32,66 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Function to load KML layer
-        function loadKMLLayer(url) {
+        // Function to load JSON data and create markers
+        function loadJSONMarkers(url) {
             fetch(url)
-                .then(response => response.text())
-                .then(kmltext => {
-                    var parser = new DOMParser();
-                    var kml = parser.parseFromString(kmltext, 'text/xml');
-                    var track = new L.KML(kml);
-                    map.addLayer(track);
-                    map.fitBounds(track.getBounds());
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(item => {
+                        var marker = L.marker([item.latitude, item.longitude]).addTo(map);
+                        marker.bindPopup(`<b>ID:</b> ${item.id}<br>
+                                          <b>Comment:</b> ${item.comment}<br>
+                                          <b>URL:</b> ${item.url}<br>
+                                          <b>Max Users:</b> ${item.maxusers}<br>
+                                          <b>Altitude:</b> ${item.altitude}<br>
+                                          <b>Antenna:</b> ${item.antenna}<br>
+                                          <b>Device:</b> ${item.device}`);
+                    });
                 });
         }
 
-        // Load KML layer from URL
-        var kiwisdrLayer = null;
-        var openwebrxLayer = null;
-        var websdrLayer = null;
-
-        function updateLayers() {
-            if (document.getElementById('kiwisdrCheckbox').checked) {
-                if (!kiwisdrLayer) {
-                    loadKMLLayer('https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/data/kml/kiwisdr.kml');
-                }
+        // Load JSON markers from URL based on checkbox status
+        document.getElementById('kiwisdrCheckbox').addEventListener('change', function() {
+            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/kiwisdr.json' : null;
+            if (url) {
+                loadJSONMarkers(url);
             } else {
-                if (kiwisdrLayer) {
-                    map.removeLayer(kiwisdrLayer);
-                    kiwisdrLayer = null;
-                }
+                // Remove existing KiwiSDR markers if checkbox is unchecked
+                map.eachLayer(function(layer) {
+                    if (layer instanceof L.Marker && layer.options.icon.options.iconUrl === 'kiwisdr-icon.png') {
+                        map.removeLayer(layer);
+                    }
+                });
             }
+        });
 
-            if (document.getElementById('openwebrxCheckbox').checked) {
-                if (!openwebrxLayer) {
-                    loadKMLLayer('https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/data/kml/openwebrx.kml');
-                }
+        document.getElementById('openwebrxCheckbox').addEventListener('change', function() {
+            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/openwebrx.json' : null;
+            if (url) {
+                loadJSONMarkers(url);
             } else {
-                if (openwebrxLayer) {
-                    map.removeLayer(openwebrxLayer);
-                    openwebrxLayer = null;
-                }
+                // Remove existing OpenWebRX markers if checkbox is unchecked
+                map.eachLayer(function(layer) {
+                    if (layer instanceof L.Marker && layer.options.icon.options.iconUrl === 'openwebrx-icon.png') {
+                        map.removeLayer(layer);
+                    }
+                });
             }
+        });
 
-            if (document.getElementById('websdrCheckbox').checked) {
-                if (!websdrLayer) {
-                    loadKMLLayer('https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/data/kml/websdr.kml');
-                }
+        document.getElementById('websdrCheckbox').addEventListener('change', function() {
+            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/websdr.json' : null;
+            if (url) {
+                loadJSONMarkers(url);
             } else {
-                if (websdrLayer) {
-                    map.removeLayer(websdrLayer);
-                    websdrLayer = null;
-                }
+                // Remove existing WebSDR markers if checkbox is unchecked
+                map.eachLayer(function(layer) {
+                    if (layer instanceof L.Marker && layer.options.icon.options.iconUrl === 'websdr-icon.png') {
+                        map.removeLayer(layer);
+                    }
+                });
             }
-        }
-
-        document.getElementById('kiwisdrCheckbox').addEventListener('change', updateLayers);
-        document.getElementById('openwebrxCheckbox').addEventListener('change', updateLayers);
-        document.getElementById('websdrCheckbox').addEventListener('change', updateLayers);
+        });
 
     </script>
 </body>
