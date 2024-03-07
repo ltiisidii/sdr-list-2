@@ -1,0 +1,34 @@
+name: JSON to KML
+
+on:
+  workflow_dispatch: # Esto permite ejecutar el flujo de trabajo manualmente desde la interfaz de GitHub
+  schedule:
+    - cron: "0 21 * * *" # Ejecutar a las 00:00 (-3 GMT)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install simplekml
+
+      - name: Convert JSON to KML
+        run: python json_to_kml.py kiwisdr.json kiwisdr.kml && python json_to_kml.py openwebrx.json openwebrx.kml && python json_to_kml.py websdr.json websdr.kml
+
+      - name: Commit and push changes
+        if: github.event_name != 'schedule' # Esto evita que se realice una confirmación y empuje en ejecuciones automáticas programadas
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add kiwisdr.kml openwebrx.kml websdr.kml
+          git commit -m "Convert JSON to KML"
+          git push
