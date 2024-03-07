@@ -23,6 +23,16 @@
             <input type="checkbox" id="websdrCheckbox"> Mostrar WebSDR
         </label>
     </div>
+    <!-- Texto de ayuda -->
+    <div>
+        <p>Modo de uso: Si necesitas un SDR, selecciona el tipo (Kiwisdr, OpenWebRX o WebSDR). Esto mostrará la ubicación de cada tipo de SDR. Al hacer clic sobre el marcador, se abrirá un popup con la información y el enlace para conectarse.</p>
+        <p>Para más información sobre cada tipo de SDR, visita los siguientes enlaces:</p>
+        <ul>
+            <li>KiwiSDR: <a href="http://kiwisdr.com/" target="_blank">http://kiwisdr.com/</a></li>
+            <li>OpenWebRX: <a href="https://fms.komkon.org/OWRX/" target="_blank">https://fms.komkon.org/OWRX/</a></li>
+            <li>WebSDR: <a href="http://www.websdr.org/" target="_blank">http://www.websdr.org/</a></li>
+        </ul>
+    </div>
 
     <script>
         var map = L.map('map').setView([0, 0], 2); // Inicializar el mapa Leaflet con centro en [0, 0] y nivel de zoom 2
