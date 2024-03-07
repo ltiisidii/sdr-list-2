@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaflet JSON Example</title>
+    <title>Ejemplo de Leaflet con JSON</title>
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- Leaflet JavaScript -->
@@ -25,40 +25,41 @@
     </div>
 
     <script>
-        var map = L.map('map').setView([0, 0], 2); // Initialize Leaflet map with center at [0, 0] and zoom level 2
+        var map = L.map('map').setView([0, 0], 2); // Inicializar el mapa Leaflet con centro en [0, 0] y nivel de zoom 2
 
-        // Add OpenStreetMap as base layer
+        // Agregar OpenStreetMap como capa base
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Function to load JSON data and create markers
-        function loadJSONMarkers(url) {
+        // Función para cargar datos JSON y crear marcadores
+        function loadJSONMarkers(url, color) {
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
                     data.forEach(item => {
-                        var marker = L.marker([item.latitude, item.longitude]).addTo(map);
+                        var marker = L.marker([item.lat, item.lon], {icon: L.divIcon({className: 'custom-marker', html: '<div style="background-color:' + color + ';" class="marker-color"></div>'})}).addTo(map);
                         marker.bindPopup(`<b>ID:</b> ${item.id}<br>
-                                          <b>Comment:</b> ${item.comment}<br>
+                                          <b>Comentario:</b> ${item.comment}<br>
                                           <b>URL:</b> ${item.url}<br>
-                                          <b>Max Users:</b> ${item.maxusers}<br>
-                                          <b>Altitude:</b> ${item.altitude}<br>
-                                          <b>Antenna:</b> ${item.antenna}<br>
-                                          <b>Device:</b> ${item.device}`);
+                                          <b>Usuarios Máximos:</b> ${item.maxusers}<br>
+                                          <b>Altitud:</b> ${item.altitude}<br>
+                                          <b>Antena:</b> ${item.antenna}<br>
+                                          <b>Dispositivo:</b> ${item.device}`);
                     });
                 });
         }
 
-        // Load JSON markers from URL based on checkbox status
+        // Cargar marcadores JSON desde URL según el estado del checkbox
         document.getElementById('kiwisdrCheckbox').addEventListener('change', function() {
             var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/kiwisdr.json' : null;
+            var color = 'blue'; // Color para los marcadores de KiwiSDR
             if (url) {
-                loadJSONMarkers(url);
+                loadJSONMarkers(url, color);
             } else {
-                // Remove existing KiwiSDR markers if checkbox is unchecked
+                // Eliminar marcadores de KiwiSDR existentes si el checkbox está desmarcado
                 map.eachLayer(function(layer) {
-                    if (layer instanceof L.Marker && layer.options.icon.options.iconUrl === 'kiwisdr-icon.png') {
+                    if (layer instanceof L.Marker && layer.options.icon.options.className === 'custom-marker' && layer.options.icon.options.html === '<div style="background-color:' + color + ';" class="marker-color"></div>') {
                         map.removeLayer(layer);
                     }
                 });
@@ -67,12 +68,13 @@
 
         document.getElementById('openwebrxCheckbox').addEventListener('change', function() {
             var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/openwebrx.json' : null;
+            var color = 'green'; // Color para los marcadores de OpenWebRX
             if (url) {
-                loadJSONMarkers(url);
+                loadJSONMarkers(url, color);
             } else {
-                // Remove existing OpenWebRX markers if checkbox is unchecked
+                // Eliminar marcadores de OpenWebRX existentes si el checkbox está desmarcado
                 map.eachLayer(function(layer) {
-                    if (layer instanceof L.Marker && layer.options.icon.options.iconUrl === 'openwebrx-icon.png') {
+                    if (layer instanceof L.Marker && layer.options.icon.options.className === 'custom-marker' && layer.options.icon.options.html === '<div style="background-color:' + color + ';" class="marker-color"></div>') {
                         map.removeLayer(layer);
                     }
                 });
@@ -81,12 +83,13 @@
 
         document.getElementById('websdrCheckbox').addEventListener('change', function() {
             var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/websdr.json' : null;
+            var color = 'red'; // Color para los marcadores de WebSDR
             if (url) {
-                loadJSONMarkers(url);
+                loadJSONMarkers(url, color);
             } else {
-                // Remove existing WebSDR markers if checkbox is unchecked
+                // Eliminar marcadores de WebSDR existentes si el checkbox está desmarcado
                 map.eachLayer(function(layer) {
-                    if (layer instanceof L.Marker && layer.options.icon.options.iconUrl === 'websdr-icon.png') {
+                    if (layer instanceof L.Marker && layer.options.icon.options.className === 'custom-marker' && layer.options.icon.options.html === '<div style="background-color:' + color + ';" class="marker-color"></div>') {
                         map.removeLayer(layer);
                     }
                 });
