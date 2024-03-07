@@ -38,7 +38,7 @@
                 .then(response => response.json())
                 .then(data => {
                     data.forEach(item => {
-                        var marker = L.marker([item.lat, item.lon], {icon: L.divIcon({className: 'custom-marker', html: '<div style="background-color:' + color + ';" class="marker-color"></div>'})}).addTo(map);
+                        var marker = L.marker([item.lat, item.lon], { color: color }).addTo(map);
                         marker.bindPopup(`<b>ID:</b> ${item.id}<br>
                                           <b>Comentario:</b> ${item.comment}<br>
                                           <b>URL:</b> ${item.url}<br>
@@ -52,14 +52,12 @@
 
         // Cargar marcadores JSON desde URL según el estado del checkbox
         document.getElementById('kiwisdrCheckbox').addEventListener('change', function() {
-            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/kiwisdr.json' : null;
-            var color = 'blue'; // Color para los marcadores de KiwiSDR
+            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/kiwisdr.json' : null;
             if (url) {
-                loadJSONMarkers(url, color);
+                loadJSONMarkers(url, 'green');
             } else {
-                // Eliminar marcadores de KiwiSDR existentes si el checkbox está desmarcado
                 map.eachLayer(function(layer) {
-                    if (layer instanceof L.Marker && layer.options.icon.options.className === 'custom-marker' && layer.options.icon.options.html === '<div style="background-color:' + color + ';" class="marker-color"></div>') {
+                    if (layer instanceof L.Marker && layer.options.color === 'green') {
                         map.removeLayer(layer);
                     }
                 });
@@ -67,14 +65,12 @@
         });
 
         document.getElementById('openwebrxCheckbox').addEventListener('change', function() {
-            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/openwebrx.json' : null;
-            var color = 'green'; // Color para los marcadores de OpenWebRX
+            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/openwebrx.json' : null;
             if (url) {
-                loadJSONMarkers(url, color);
+                loadJSONMarkers(url, 'blue');
             } else {
-                // Eliminar marcadores de OpenWebRX existentes si el checkbox está desmarcado
                 map.eachLayer(function(layer) {
-                    if (layer instanceof L.Marker && layer.options.icon.options.className === 'custom-marker' && layer.options.icon.options.html === '<div style="background-color:' + color + ';" class="marker-color"></div>') {
+                    if (layer instanceof L.Marker && layer.options.color === 'blue') {
                         map.removeLayer(layer);
                     }
                 });
@@ -82,14 +78,12 @@
         });
 
         document.getElementById('websdrCheckbox').addEventListener('change', function() {
-            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/websdr.json' : null;
-            var color = 'red'; // Color para los marcadores de WebSDR
+            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/websdr.json' : null;
             if (url) {
-                loadJSONMarkers(url, color);
+                loadJSONMarkers(url, 'red');
             } else {
-                // Eliminar marcadores de WebSDR existentes si el checkbox está desmarcado
                 map.eachLayer(function(layer) {
-                    if (layer instanceof L.Marker && layer.options.icon.options.className === 'custom-marker' && layer.options.icon.options.html === '<div style="background-color:' + color + ';" class="marker-color"></div>') {
+                    if (layer instanceof L.Marker && layer.options.color === 'red') {
                         map.removeLayer(layer);
                     }
                 });
