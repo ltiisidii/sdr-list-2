@@ -14,13 +14,13 @@
 
     <div>
         <label>
-            <input type="checkbox" id="kiwisdrCheckbox" checked> Mostrar KiwiSDR
+            <input type="checkbox" id="kiwisdrCheckbox"> Mostrar KiwiSDR
         </label>
         <label>
-            <input type="checkbox" id="openwebrxCheckbox" checked> Mostrar OpenWebRX
+            <input type="checkbox" id="openwebrxCheckbox"> Mostrar OpenWebRX
         </label>
         <label>
-            <input type="checkbox" id="websdrCheckbox" checked> Mostrar WebSDR
+            <input type="checkbox" id="websdrCheckbox"> Mostrar WebSDR
         </label>
     </div>
 
@@ -41,7 +41,7 @@
                         var marker = L.marker([item.lat, item.lon], { color: color }).addTo(map);
                         marker.bindPopup(`<b>ID:</b> ${item.id}<br>
                                           <b>Comentario:</b> ${item.comment}<br>
-                                          <b>URL:</b> ${item.url}<br>
+                                          <b>URL:</b> <a href="${item.url}" target="_blank">conectarse al sdr</a><br>
                                           <b>Usuarios Máximos:</b> ${item.maxusers}<br>
                                           <b>Altitud:</b> ${item.altitude}<br>
                                           <b>Antena:</b> ${item.antenna}<br>
