@@ -52,7 +52,7 @@
 
         // Cargar marcadores JSON desde URL según el estado del checkbox
         document.getElementById('kiwisdrCheckbox').addEventListener('change', function() {
-            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/kiwisdr.json' : null;
+            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/kiwisdr.json' : null;
             var color = 'blue'; // Color para los marcadores de KiwiSDR
             if (url) {
                 loadJSONMarkers(url, color);
@@ -67,7 +67,7 @@
         });
 
         document.getElementById('openwebrxCheckbox').addEventListener('change', function() {
-            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/openwebrx.json' : null;
+            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/openwebrx.json' : null;
             var color = 'green'; // Color para los marcadores de OpenWebRX
             if (url) {
                 loadJSONMarkers(url, color);
@@ -82,7 +82,7 @@
         });
 
         document.getElementById('websdrCheckbox').addEventListener('change', function() {
-            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/websdr.json' : null;
+            var url = this.checked ? 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/websdr.json' : null;
             var color = 'red'; // Color para los marcadores de WebSDR
             if (url) {
                 loadJSONMarkers(url, color);
