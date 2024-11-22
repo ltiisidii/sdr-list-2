@@ -3,6 +3,7 @@
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0C70W7R3KR"></script>
+
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -43,6 +44,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.terminator"></script>
     <style>
         /* Estilos para centrar texto */
         .centered-text {
@@ -89,6 +91,17 @@
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
+
+        // Crear y agregar la sombra del día/noche
+        var terminator = L.terminator();
+        terminator.addTo(map);
+
+        // Actualizar la sombra cada minuto
+        setInterval(() => {
+            map.removeLayer(terminator); // Quitar la capa actual
+            terminator = L.terminator(); // Crear una nueva capa con la posición actual
+            terminator.addTo(map);       // Agregar la nueva capa al mapa
+        }, 60000); // Actualiza cada 60 segundos
 
         // Definir los iconos personalizados
         var greenIcon = new L.Icon({
