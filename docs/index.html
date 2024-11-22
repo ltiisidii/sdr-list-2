@@ -93,7 +93,10 @@
         }).addTo(map);
 
         // Crear y agregar la sombra del día/noche
-        var terminator = L.terminator(); // Crear la capa de terminador
+        var terminator = L.terminator({
+            resolution: 2,          // Resolución (más alta = más detallado)
+            longitudeRange: 720     // Extiende la sombra de -360° a +360°
+        });
         terminator.addTo(map);           // Agregar la capa al mapa
 
         // Validar y actualizar cada minuto
