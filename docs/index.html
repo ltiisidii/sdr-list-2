@@ -93,15 +93,16 @@
         }).addTo(map);
 
         // Crear y agregar la sombra del día/noche
-        var terminator = L.terminator();
-        terminator.addTo(map);
+        var terminator = L.terminator(); // Crear la capa de terminador
+        terminator.addTo(map);           // Agregar la capa al mapa
 
-        // Actualizar la sombra cada minuto
+        // Validar y actualizar cada minuto
         setInterval(() => {
+            console.log("Actualizando la sombra del día/noche: " + new Date().toLocaleTimeString()); // Imprime la hora actual en la consola
             map.removeLayer(terminator); // Quitar la capa actual
             terminator = L.terminator(); // Crear una nueva capa con la posición actual
             terminator.addTo(map);       // Agregar la nueva capa al mapa
-        }, 60000); // Actualiza cada 60 segundos
+        }, 60000); // Actualizar cada 60 segundos
 
         // Definir los iconos personalizados
         var greenIcon = new L.Icon({
