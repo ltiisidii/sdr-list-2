@@ -41,8 +41,18 @@
     <meta name="twitter:title" content="Mapa de SDRs">
     <meta name="twitter:description" content="Mapa con la ubicación de todos los SDR: OpenWebRX, KiwiSDR y WebSDR">
     <meta name="twitter:image" content="tw_imagen.png">
+    <!-- Datos estructurados Schema.org -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Mapas de SDR para Radioaficionados",
+        "description": "Mapa interactivo para encontrar KiwiSDR, OpenWebRX y WebSDR en tiempo real.",
+        "url": "https://map-sdr.p00lack.cc"
+        }
+    </script>
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="preload" href="https://unpkg.com/leaflet/dist/leaflet.css" as="style" onload="this.rel='stylesheet'">
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/@joergdietrich/leaflet.terminator"></script>
