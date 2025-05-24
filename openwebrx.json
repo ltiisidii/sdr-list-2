@@ -712,16 +712,6 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
-        "id": "sdr.facha.dev",
-        "lat": 37.74637607603466,
-        "lon": -25.573291800131866,
-        "comment": "CS8ACT",
-        "url": "https://sdr.facha.dev/",
-        "device": "OpenWebRX 1.2.82"
-    },
-    {
-        "type": "latlon",
-        "mode": "OpenWebRX",
         "id": "sdr.packetradio.at:8901",
         "lat": 48.41858056758566,
         "lon": 15.563992883190263,
@@ -1318,6 +1308,16 @@
         "comment": "SDR alojado por Alejandro CE3VRT",
         "url": "http://45.160.72.145:73/",
         "device": "OpenWebRX 1.2.24"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
+        "id": "sdr.backyard.stream",
+        "lat": 36.148751336174364,
+        "lon": -82.69378453297419,
+        "comment": "K4MBD",
+        "url": "https://sdr.backyard.stream/",
+        "device": "OpenWebRX 1.2.70"
     },
     {
         "type": "latlon",
@@ -2352,16 +2352,6 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
-        "id": "sdr.42dx.ru:8073",
-        "lat": 53.815407868640136,
-        "lon": 87.37676171884071,
-        "comment": "RA9UIP",
-        "url": "http://sdr.42dx.ru:8073/",
-        "device": "OpenWebRX 1.2.85"
-    },
-    {
-        "type": "latlon",
-        "mode": "OpenWebRX",
         "id": "ta2om.ddnsfree.com:8073",
         "lat": 39.858763804326486,
         "lon": 32.8120625270011,
@@ -2623,8 +2613,8 @@
         "type": "latlon",
         "mode": "OpenWebRX",
         "id": "gids.nl:8073",
-        "lat": 51.799181667,
-        "lon": 5.714335,
+        "lat": 51.799153333,
+        "lon": 5.714441667,
         "comment": "<a href='https://sdr.gids.nl' target='new' title='Website PA3FUA'>PA3FUA</a>",
         "url": "https://gids.nl:8073/",
         "device": "OpenWebRX 1.2.85"
@@ -3212,6 +3202,16 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
+        "id": "websdr.lsvit.ru:8073",
+        "lat": 56.46357924157687,
+        "lon": 84.97538730814988,
+        "comment": "R9HDG",
+        "url": "http://websdr.lsvit.ru:8073/",
+        "device": "OpenWebRX 1.2.85"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
         "id": "websdr64.ru:8073",
         "lat": 51.615510253367006,
         "lon": 45.98602676391603,
@@ -3518,6 +3518,16 @@
         "comment": "HB3YLK - CB,SW,Freenet,VHF,PMR,UHF and a few Testsettings",
         "url": "http://109.202.205.254:8080/",
         "device": "OpenWebRX 1.2.2"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
+        "id": "sdr.ua6hdw.keenetic.link",
+        "lat": 45.29293,
+        "lon": 41.0489,
+        "comment": "alexzulu's openwebrx",
+        "url": "https://sdr.ua6hdw.keenetic.link/",
+        "device": "OpenWebRX 1.2.82"
     },
     {
         "type": "latlon",
