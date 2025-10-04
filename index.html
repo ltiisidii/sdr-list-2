@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0C70W7R3KR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0C70W7R3KR', { 'anonymize_ip': true });
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDR Maps for Ham Radio Enthusiasts</title>
+    <meta name="description" content="Discover SDR maps for ham radio. Locate KiwiSDR, OpenWebRX & WebSDR worldwide. Explore frequencies & connect instantly">
+    <meta name="keywords" content="SDR maps, ham radio, KiwiSDR, OpenWebRX, WebSDR, radio defined by software, real-time SDR, global SDR map">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="LU6EWB">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://map-sdr.p00lack.cc">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="SDR Maps for Ham Radio Enthusiasts">
+    <meta property="og:description" content="Map with the location of all SDRs: OpenWebRX, KiwiSDR and WebSDR">
+    <meta property="og:image" content="og_imagen.png">
+    <meta property="og:url" content="https://map-sdr.p00lack.cc">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SDR Maps for Ham Radio Enthusiasts">
+    <meta name="twitter:description" content="Map with the location of all SDRs: OpenWebRX, KiwiSDR and WebSDR">
+    <meta name="twitter:image" content="tw_imagen.png">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "SDR Maps for Ham Radio Enthusiasts",
+        "description": "Discover real-time SDR maps for ham radio enthusiasts. Find locations of KiwiSDR, OpenWebRX, and WebSDR worldwide.",
+        "url": "https://map-sdr.p00lack.cc",
+        "image": "https://map-sdr.p00lack.cc/og_imagen.png"
+    }
+    </script>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .controls-panel {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .search-container {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+            font-size: 1.2rem;
+        }
+
+        .clear-search {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #9ca3af;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 0.25rem;
+            display: none;
+        }
+
+        .clear-search:hover {
+            color: #ef4444;
+        }
+
+        .clear-search.active {
+            display: block;
+        }
+
+        .filter-select {
+            padding: 0.75rem 2.5rem 0.75rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            min-width: 150px;
+            max-width: 200px;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .search-results {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .search-results.active {
+            display: block;
+        }
+
+        .search-results-header {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .search-results-list {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .search-result-item {
+            padding: 0.75rem;
+            background: white;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+        }
+
+        .search-result-item:hover {
+            background: #f3f4f6;
+            border-left-color: #667eea;
+            transform: translateX(3px);
+        }
+
+        .search-result-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .search-result-item small {
+            color: #6b7280;
+            font-size: 0.85rem;
+        }
+
+        .no-results {
+            text-align: center;
+            color: #9ca3af;
+            padding: 1rem;
+        }
+
+        body.dark-mode .search-input,
+        body.dark-mode .filter-select {
+            background: #2d3748;
+            border-color: #4a5568;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .search-results {
+            background: #2d3748;
+        }
+
+        body.dark-mode .search-result-item {
+            background: #1a202c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .search-result-item:hover {
+            background: #2d3748;
+        }
+
+        body.dark-mode .search-container {
+            border-bottom-color: #4a5568;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #f0f0f0;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background: #e0e0e0;
+        }
+
+        .theme-switch {
+            position: relative;
+            width: 50px;
+            height: 26px;
+        }
+
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #667eea;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(24px);
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+        }
+
+        body.dark-mode .controls-panel,
+        body.dark-mode .info-section {
+            background: #16213e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .stat-badge {
+            background: #2d3748;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .theme-toggle {
+            background: #2d3748;
+        }
+
+        body.dark-mode .theme-toggle:hover {
+            background: #4a5568;
+        }
+
+        body.dark-mode .links-list li {
+            background: #2d3748;
+            border-left-color: #667eea;
+        }
+
+        body.dark-mode .links-list a {
+            color: #818cf8;
+        }
+
+        body.dark-mode .info-section h3 {
+            color: #818cf8;
+        }
+
+        body.dark-mode .info-section p {
+            color: #cbd5e0;
+        }
+
+        body.dark-mode .stats {
+            color: #cbd5e0;
+        }
+
+        body.dark-mode .leaflet-popup-content {
+            color: #333;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .checkbox-label:hover {
+            opacity: 0.8;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stat-badge {
+            background: #f0f0f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        #map {
+            height: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin-bottom: 1rem;
+        }
+
+        .info-section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .info-section h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .info-section p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .links-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .links-list li {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+
+        .links-list a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            word-break: break-all;
+        }
+
+        .links-list a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 1rem;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .error-message {
+            display: none;
+            background: #fee;
+            color: #c33;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #c33;
+        }
+
+        .error-message.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            #map {
+                height: 400px;
+            }
+
+            .checkbox-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        /* Custom popup styles */
+        .leaflet-popup-content {
+            margin: 1rem;
+            min-width: 200px;
+        }
+
+        .leaflet-popup-content b {
+            color: #667eea;
+        }
+
+        /* Marker drop animation */
+        @keyframes markerDrop {
+            0% {
+                transform: translateY(-500px) scale(0);
+                opacity: 0;
+            }
+            60% {
+                transform: translateY(0) scale(1.1);
+                opacity: 1;
+            }
+            80% {
+                transform: translateY(-10px) scale(0.95);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .marker-drop {
+            animation: markerDrop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        /* Pulse effect for new markers */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(102, 126, 234, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SDR Maps for Ham Radio Enthusiasts</h1>
+        <h2>Find KiwiSDR, OpenWebRX, and WebSDR Worldwide</h2>
+    </header>
+
+    <div class="container">
+        <div class="controls-panel">
+            <div class="search-container">
+                <div class="search-bar">
+                    <div class="search-input-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Search by name, location, ID, device..."
+                            aria-label="Search SDR stations"
+                        >
+                        <button class="clear-search" id="clearSearch" aria-label="Clear search">✕</button>
+                    </div>
+                    <select id="typeFilter" class="filter-select" aria-label="Filter by SDR type">
+                        <option value="all">All Types</option>
+                        <option value="kiwisdr">KiwiSDR</option>
+                        <option value="openwebrx">OpenWebRX</option>
+                        <option value="websdr">WebSDR</option>
+                    </select>
+                    <select id="countryFilter" class="filter-select" aria-label="Filter by location">
+                        <option value="all">Loading...</option>
+                    </select>
+                </div>
+                <div class="search-results" id="searchResults">
+                    <div class="search-results-header" id="resultsHeader"></div>
+                    <div class="search-results-list" id="resultsList"></div>
+                </div>
+            </div>
+
+            <div class="checkbox-group">
+                <label class="checkbox-label" style="color: #10b981;">
+                    <input type="checkbox" id="kiwisdrCheckbox" aria-label="Show KiwiSDR stations">
+                    <span>KiwiSDR</span>
+                </label>
+                <label class="checkbox-label" style="color: #3b82f6;">
+                    <input type="checkbox" id="openwebrxCheckbox" aria-label="Show OpenWebRX stations">
+                    <span>OpenWebRX</span>
+                </label>
+                <label class="checkbox-label" style="color: #ef4444;">
+                    <input type="checkbox" id="websdrCheckbox" aria-label="Show WebSDR stations">
+                    <span>WebSDR</span>
+                </label>
+                
+                <div class="theme-toggle" id="themeToggle">
+                    <span id="themeLabel">🌙 Dark Mode</span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="themeSwitch" aria-label="Toggle dark mode">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span style="color: #10b981;">●</span>
+                    <span>KiwiSDR: <span class="stat-badge" id="kiwisdr-count">0</span></span>
+                </div>
+                <div class="stat-item">
+                    <span style="color: #3b82f6;">●</span>
+                    <span>OpenWebRX: <span class="stat-badge" id="openwebrx-count">0</span></span>
+                </div>
+                <div class="stat-item">
+                    <span style="color: #ef4444;">●</span>
+                    <span>WebSDR: <span class="stat-badge" id="websdr-count">0</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">Loading SDR stations...</div>
+        <div class="error-message" id="error"></div>
+
+        <div id="map"></div>
+
+        <div class="info-section">
+            <h3>How to Use</h3>
+            <p>Select the type of SDR you want to view (KiwiSDR, OpenWebRX, or WebSDR). This will display the location of each SDR station on the map. Click on any marker to see detailed information and a link to connect to that station.</p>
+            
+            <h3>About SDR Types</h3>
+            <p>Learn more about each type of Software Defined Radio:</p>
+            <ul class="links-list">
+                <li><strong>KiwiSDR:</strong> <a href="http://kiwisdr.com/" target="_blank" rel="noopener noreferrer nofollow">kiwisdr.com</a></li>
+                <li><strong>OpenWebRX:</strong> <a href="https://fms.komkon.org/OWRX/" target="_blank" rel="noopener noreferrer nofollow">fms.komkon.org/OWRX</a></li>
+                <li><strong>WebSDR:</strong> <a href="http://www.websdr.org/" target="_blank" rel="noopener noreferrer nofollow">websdr.org</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by LU6EWB</p>
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/@joergdietrich/leaflet.terminator"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+    <script>
+        // Initialize map
+        const map = L.map('map').setView([0, 0], 2);
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 19
+        }).addTo(map);
+
+        // Add day/night terminator
+        let terminator = L.terminator({
+            resolution: 2,
+            longitudeRange: 720
+        }).addTo(map);
+
+        // Update terminator every minute
+        setInterval(() => {
+            map.removeLayer(terminator);
+            terminator = L.terminator({
+                resolution: 2,
+                longitudeRange: 720
+            }).addTo(map);
+        }, 60000);
+
+        // Define custom icons
+        const greenIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/img/marker-icon-2x-green.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        const blueIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/img/marker-icon-2x-blue.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        const redIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/docs/img/marker-icon-2x-red.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        // Layer groups for each SDR type
+        const layers = {
+            kiwisdr: L.markerClusterGroup(),
+            openwebrx: L.markerClusterGroup(),
+            websdr: L.markerClusterGroup()
+        };
+
+        // Data cache
+        const dataCache = {
+            kiwisdr: null,
+            openwebrx: null,
+            websdr: null
+        };
+
+        // All SDRs combined for search
+        let allSDRs = [];
+        let countries = new Set();
+
+        // UI elements
+        const loadingEl = document.getElementById('loading');
+        const errorEl = document.getElementById('error');
+        const countEls = {
+            kiwisdr: document.getElementById('kiwisdr-count'),
+            openwebrx: document.getElementById('openwebrx-count'),
+            websdr: document.getElementById('websdr-count')
+        };
+
+        // Search elements
+        const searchInput = document.getElementById('searchInput');
+        const clearSearchBtn = document.getElementById('clearSearch');
+        const typeFilter = document.getElementById('typeFilter');
+        const countryFilter = document.getElementById('countryFilter');
+        const searchResults = document.getElementById('searchResults');
+        const resultsHeader = document.getElementById('resultsHeader');
+        const resultsList = document.getElementById('resultsList');
+
+        // Show loading state
+        function showLoading(show) {
+            loadingEl.classList.toggle('active', show);
+        }
+
+        // Show error message
+        function showError(message) {
+            errorEl.textContent = message;
+            errorEl.classList.add('active');
+            setTimeout(() => errorEl.classList.remove('active'), 5000);
+        }
+
+        // Update counter
+        function updateCount(type, count) {
+            if (countEls[type]) {
+                countEls[type].textContent = count;
+            }
+        }
+
+        // Load and cache JSON data
+        async function loadJSONData(url, type) {
+            if (dataCache[type]) {
+                return dataCache[type];
+            }
+
+            try {
+                showLoading(true);
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                // Add type to each item and extract location
+                data.forEach(item => {
+                    item.type = type;
+                    // Extract location from comment (last part after comma)
+                    if (item.comment) {
+                        const parts = item.comment.split(',');
+                        if (parts.length > 0) {
+                            // Take last 1-2 parts as location (city, country or state, country)
+                            let location;
+                            if (parts.length >= 2) {
+                                // Try to get last 2 parts (e.g., "California, USA")
+                                location = parts.slice(-2).join(',').trim();
+                            } else {
+                                location = parts[parts.length - 1].trim();
+                            }
+                            item.country = location;
+                            countries.add(location);
+                        }
+                    }
+                });
+                
+                dataCache[type] = data;
+                updateCount(type, data.length);
+                
+                // Add to combined list
+                allSDRs = allSDRs.concat(data);
+                updateCountryFilter();
+                
+                return data;
+            } catch (error) {
+                showError(`Error loading ${type} data: ${error.message}`);
+                console.error(`Error loading ${type}:`, error);
+                return [];
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        // Create markers from data
+        function createMarkers(data, icon, layer) {
+            let delay = 0;
+            
+            data.forEach((item, index) => {
+                setTimeout(() => {
+                    const marker = L.marker([item.lat, item.lon], { icon });
+                    
+                    const popupContent = `
+                        <b>ID:</b> ${item.id || 'N/A'}<br>
+                        <b>Comment:</b> ${item.comment || 'N/A'}<br>
+                        <b>URL:</b> <a href="${item.url}" target="_blank" rel="noopener noreferrer">Connect to SDR</a><br>
+                        <b>Max Users:</b> ${item.maxusers || 'N/A'}<br>
+                        <b>Altitude:</b> ${item.altitude || 'N/A'}<br>
+                        <b>Antenna:</b> ${item.antenna || 'N/A'}<br>
+                        <b>Device:</b> ${item.device || 'N/A'}
+                    `;
+                    
+                    marker.bindPopup(popupContent);
+                    layer.addLayer(marker);
+                    
+                    // Add animation class to marker icon
+                    const markerElement = marker.getElement();
+                    if (markerElement) {
+                        markerElement.classList.add('marker-drop');
+                    }
+                }, delay);
+                
+                // Stagger animation: faster for first markers, then batch load
+                if (index < 20) {
+                    delay += 30; // First 20 markers animate individually
+                } else if (index < 50) {
+                    delay += 10; // Next 30 markers animate faster
+                } else {
+                    delay += 2; // Remaining markers load very quickly
+                }
+            });
+        }
+
+        // Toggle layer visibility
+        async function toggleLayer(type, url, icon, checked) {
+            if (checked) {
+                const data = await loadJSONData(url, type);
+                if (data.length > 0) {
+                    createMarkers(data, icon, layers[type]);
+                    map.addLayer(layers[type]);
+                }
+            } else {
+                map.removeLayer(layers[type]);
+                layers[type].clearLayers();
+            }
+        }
+
+        // Checkbox event listeners
+        document.getElementById('kiwisdrCheckbox').addEventListener('change', function(e) {
+            toggleLayer(
+                'kiwisdr',
+                'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/kiwisdr.json',
+                greenIcon,
+                e.target.checked
+            );
+        });
+
+        document.getElementById('openwebrxCheckbox').addEventListener('change', function(e) {
+            toggleLayer(
+                'openwebrx',
+                'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/openwebrx.json',
+                blueIcon,
+                e.target.checked
+            );
+        });
+
+        document.getElementById('websdrCheckbox').addEventListener('change', function(e) {
+            toggleLayer(
+                'websdr',
+                'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/websdr.json',
+                redIcon,
+                e.target.checked
+            );
+        });
+
+        // Preload counts on page load
+        (async function preloadCounts() {
+            const urls = {
+                kiwisdr: 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/kiwisdr.json',
+                openwebrx: 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/openwebrx.json',
+                websdr: 'https://raw.githubusercontent.com/ltiisidii/sdr-list-2/main/websdr.json'
+            };
+
+            for (const [type, url] of Object.entries(urls)) {
+                try {
+                    await loadJSONData(url, type);
+                } catch (error) {
+                    console.error(`Error preloading ${type} count:`, error);
+                }
+            }
+        })();
+
+        // Update country filter dropdown
+        function updateCountryFilter() {
+            const sortedCountries = Array.from(countries).sort();
+            countryFilter.innerHTML = '<option value="all">All Locations</option>';
+            sortedCountries.forEach(country => {
+                const option = document.createElement('option');
+                option.value = country;
+                option.textContent = country;
+                countryFilter.appendChild(option);
+            });
+        }
+
+        // Search and filter functionality
+        function performSearch() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            const selectedType = typeFilter.value;
+            const selectedCountry = countryFilter.value;
+
+            // Show/hide clear button
+            clearSearchBtn.classList.toggle('active', searchTerm.length > 0);
+
+            // If no search term and all filters, hide results
+            if (!searchTerm && selectedType === 'all' && selectedCountry === 'all') {
+                searchResults.classList.remove('active');
+                return;
+            }
+
+            // Filter SDRs
+            let filtered = allSDRs.filter(sdr => {
+                // Type filter
+                if (selectedType !== 'all' && sdr.type !== selectedType) {
+                    return false;
+                }
+
+                // Country filter
+                if (selectedCountry !== 'all' && sdr.country !== selectedCountry) {
+                    return false;
+                }
+
+                // Search term
+                if (searchTerm) {
+                    const searchableText = [
+                        sdr.id,
+                        sdr.comment,
+                        sdr.device,
+                        sdr.antenna,
+                        sdr.country
+                    ].filter(Boolean).join(' ').toLowerCase();
+
+                    return searchableText.includes(searchTerm);
+                }
+
+                return true;
+            });
+
+            displaySearchResults(filtered);
+        }
+
+        // Display search results
+        function displaySearchResults(results) {
+            searchResults.classList.add('active');
+            resultsHeader.textContent = `Found ${results.length} SDR${results.length !== 1 ? 's' : ''}`;
+
+            if (results.length === 0) {
+                resultsList.innerHTML = '<div class="no-results">No SDRs found. Try different filters.</div>';
+                return;
+            }
+
+            resultsList.innerHTML = results.slice(0, 50).map(sdr => {
+                const typeColors = {
+                    kiwisdr: '#10b981',
+                    openwebrx: '#3b82f6',
+                    websdr: '#ef4444'
+                };
+
+                return `
+                    <div class="search-result-item" data-lat="${sdr.lat}" data-lon="${sdr.lon}" data-type="${sdr.type}" style="border-left-color: ${typeColors[sdr.type]}">
+                        <strong>${sdr.comment || sdr.id || 'Unknown'}</strong>
+                        <small>
+                            ${sdr.type.toUpperCase()} 
+                            ${sdr.device ? '• ' + sdr.device : ''} 
+                            ${sdr.country ? '• ' + sdr.country : ''}
+                        </small>
+                    </div>
+                `;
+            }).join('');
+
+            // Add click listeners to results
+            resultsList.querySelectorAll('.search-result-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const lat = parseFloat(item.dataset.lat);
+                    const lon = parseFloat(item.dataset.lon);
+                    const type = item.dataset.type;
+
+                    // Ensure the layer is visible
+                    const checkbox = document.getElementById(`${type}Checkbox`);
+                    if (!checkbox.checked) {
+                        checkbox.click();
+                    }
+
+                    // Zoom to marker
+                    map.setView([lat, lon], 12);
+
+                    // Find and open the marker popup
+                    setTimeout(() => {
+                        layers[type].eachLayer(layer => {
+                            const markerLatLng = layer.getLatLng();
+                            if (markerLatLng.lat === lat && markerLatLng.lng === lon) {
+                                layer.openPopup();
+                            }
+                        });
+                    }, 500);
+                });
+            });
+
+            if (results.length > 50) {
+                resultsList.innerHTML += '<div class="no-results">Showing first 50 results. Refine your search for more specific results.</div>';
+            }
+        }
+
+        // Clear search
+        clearSearchBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            typeFilter.value = 'all';
+            countryFilter.value = 'all';
+            searchResults.classList.remove('active');
+            clearSearchBtn.classList.remove('active');
+        });
+
+        // Search event listeners
+        searchInput.addEventListener('input', performSearch);
+        typeFilter.addEventListener('change', performSearch);
+        countryFilter.addEventListener('change', performSearch);
+
+        // Dark mode toggle functionality
+        const themeSwitch = document.getElementById('themeSwitch');
+        const themeLabel = document.getElementById('themeLabel');
+        const body = document.body;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeSwitch.checked = true;
+            themeLabel.textContent = '☀️ Light Mode';
+        }
+
+        // Theme toggle event listener
+        themeSwitch.addEventListener('change', function() {
+            if (this.checked) {
+                body.classList.add('dark-mode');
+                themeLabel.textContent = '☀️ Light Mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                themeLabel.textContent = '🌙 Dark Mode';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
