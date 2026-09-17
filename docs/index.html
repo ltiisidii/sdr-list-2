@@ -492,6 +492,22 @@
             font-style: italic;
         }
 
+        .support-section {
+            max-width: 640px;
+            margin: 1.5rem auto 0;
+            font-style: normal;
+        }
+
+        .support-section h2 {
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            opacity: 1;
+        }
+
+        body.dark-mode .support-section {
+            color: #cbd5e0;
+        }
+
         .cafecito-link {
             display: inline-block;
             max-width: 100%;
@@ -698,13 +714,17 @@
 
     <footer>
         <p>Created by LU6EWB</p>
-        <a class="cafecito-link" href="https://cafecito.app/p00lack" rel="noopener" target="_blank">
-            <img
-                srcset="https://cdn.cafecito.app/imgs/buttons/button_1.png 1x, https://cdn.cafecito.app/imgs/buttons/button_1_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_1_3.75x.png 3.75x"
-                src="https://cdn.cafecito.app/imgs/buttons/button_1.png"
-                alt="Invitame un café en cafecito.app"
-            />
-        </a>
+        <section class="support-section" lang="es" aria-labelledby="support-title">
+            <h2 id="support-title">❤️ Apoyar Map-SDR</h2>
+            <p>Map-SDR es un proyecto gratuito. Si te resulta útil y querés ayudar a mantener su infraestructura y desarrollo, podés realizar un aporte voluntario. El aporte no otorga acceso a funciones adicionales ni constituye el pago por un servicio.</p>
+            <a class="cafecito-link" href="https://cafecito.app/p00lack" rel="noopener" target="_blank">
+                <img
+                    srcset="https://cdn.cafecito.app/imgs/buttons/button_1.png 1x, https://cdn.cafecito.app/imgs/buttons/button_1_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_1_3.75x.png 3.75x"
+                    src="https://cdn.cafecito.app/imgs/buttons/button_1.png"
+                    alt="Invitame un café en cafecito.app"
+                />
+            </a>
+        </section>
     </footer>
 
     <!-- Leaflet JavaScript -->
