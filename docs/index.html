@@ -850,38 +850,97 @@
             this._div.innerHTML = `<div class="muf-legend-title">MUF</div>${rows}<div class="muf-legend-time">${time}</div>`;
         };
 
-        async function loadMUF() {
-            try {
-                const response = await fetch(MUF_URL, { cache: 'no-store' });
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                const lastModified = response.headers.get('Last-Modified');
-                mufUpdated = lastModified ? new Date(lastModified) : new Date();
+        const MUF_SVG_URL = 'https://prop.kc2g.com/renders/current/mufd-normal-now.svg';
+        const MERCATOR_MAX_LAT = 85.0511287798066;
+        // Repeat the overlay on the neighbouring world copies, like the terminator
+        const MUF_WORLD_OFFSETS = [-360, 0, 360];
 
-                const layer = L.geoJSON(data, {
-                    style: feature => ({
-                        color: MUF_COLORS[feature.properties['level-value']] || feature.properties.stroke || '#888',
-                        weight: 2,
-                        opacity: 0.85
-                    }),
-                    onEachFeature: (feature, l) => {
-                        l.bindTooltip(`MUF ${feature.properties['level-value']} MHz`, { sticky: true });
-                    }
-                });
+        // Raster below the terminator and contour lines (overlayPane is 400)
+        map.createPane('mufRasterPane');
+        map.getPane('mufRasterPane').style.zIndex = 350;
+        map.getPane('mufRasterPane').style.pointerEvents = 'none';
 
-                if (mufLayer) {
-                    map.removeLayer(mufLayer);
-                }
-                mufLayer = layer;
-                if (mufCheckbox.checked) {
-                    mufLayer.addTo(map);
-                }
-                mufLegend.update();
-            } catch (error) {
-                console.error('Error loading MUF data:', error);
+        async function loadMUFContours() {
+            const response = await fetch(MUF_URL, { cache: 'no-store' });
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
+            const data = await response.json();
+            const lastModified = response.headers.get('Last-Modified');
+            mufUpdated = lastModified ? new Date(lastModified) : new Date();
+
+            return L.layerGroup(MUF_WORLD_OFFSETS.map(offset => L.geoJSON(data, {
+                coordsToLatLng: coords => L.latLng(coords[1], coords[0] + offset),
+                style: feature => ({
+                    color: MUF_COLORS[feature.properties['level-value']] || feature.properties.stroke || '#888',
+                    weight: 2,
+                    opacity: 0.85
+                }),
+                onEachFeature: (feature, l) => {
+                    l.bindTooltip(`MUF ${feature.properties['level-value']} MHz`, { sticky: true });
+                }
+            })));
+        }
+
+        // KC2G embeds the colored MUF field in its SVG map as an equirectangular PNG
+        // (whole globe, stored south-up). Reproject it to Web Mercator so it lines up
+        // with Leaflet and the contour lines.
+        async function loadMUFRaster() {
+            const response = await fetch(MUF_SVG_URL, { cache: 'no-store' });
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const svg = await response.text();
+            const match = svg.match(/<image[^>]*xlink:href="(data:image\/png;base64,[^"]+)"/);
+            if (!match) {
+                throw new Error('MUF raster not found in SVG');
+            }
+
+            const img = new Image();
+            img.src = match[1].replace(/\s+/g, '');
+            await img.decode();
+
+            const canvas = document.createElement('canvas');
+            canvas.width = 1024;
+            canvas.height = 1024;
+            const ctx = canvas.getContext('2d');
+            for (let y = 0; y < canvas.height; y++) {
+                const mercY = Math.PI * (1 - 2 * (y + 0.5) / canvas.height);
+                const lat = Math.atan(Math.sinh(mercY)) * 180 / Math.PI;
+                const srcRow = Math.min(img.height - 1, Math.floor((lat + 90) / 180 * img.height));
+                ctx.drawImage(img, 0, srcRow, img.width, 1, 0, y, canvas.width, 1);
+            }
+
+            const dataUrl = canvas.toDataURL();
+            return L.layerGroup(MUF_WORLD_OFFSETS.map(offset => L.imageOverlay(dataUrl, [
+                [-MERCATOR_MAX_LAT, -180 + offset],
+                [MERCATOR_MAX_LAT, 180 + offset]
+            ], { pane: 'mufRasterPane', interactive: false })));
+        }
+
+        async function loadMUF() {
+            const [raster, contours] = await Promise.allSettled([loadMUFRaster(), loadMUFContours()]);
+            const layer = L.layerGroup();
+
+            [raster, contours].forEach(result => {
+                if (result.status === 'fulfilled') {
+                    layer.addLayer(result.value);
+                } else {
+                    console.error('Error loading MUF data:', result.reason);
+                }
+            });
+
+            if (layer.getLayers().length === 0) {
+                return;
+            }
+            if (mufLayer) {
+                map.removeLayer(mufLayer);
+            }
+            mufLayer = layer;
+            if (mufCheckbox.checked) {
+                mufLayer.addTo(map);
+            }
+            mufLegend.update();
         }
 
         mufCheckbox.addEventListener('change', function(e) {
