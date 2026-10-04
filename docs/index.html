@@ -1269,6 +1269,71 @@
             }
         }
 
+        // Amateur bands used to describe what each receiver covers (MHz)
+        const HAM_BANDS = [
+            ['2200m', 0.1357, 0.1378], ['630m', 0.472, 0.479], ['160m', 1.8, 2.0],
+            ['80m', 3.5, 4.0], ['60m', 5.25, 5.45], ['40m', 7.0, 7.3], ['30m', 10.1, 10.15],
+            ['20m', 14.0, 14.35], ['17m', 18.068, 18.168], ['15m', 21.0, 21.45],
+            ['12m', 24.89, 24.99], ['10m', 28.0, 29.7], ['6m', 50, 54], ['4m', 70, 70.5],
+            ['2m', 144, 148], ['70cm', 430, 440], ['23cm', 1240, 1300]
+        ];
+        const HF_BANDS = ['160m', '80m', '60m', '40m', '30m', '20m', '17m', '15m', '12m', '10m'];
+        const LF_BANDS = ['2200m', '630m'];
+
+        function formatFreq(hz) {
+            if (hz === 0) return '0';
+            if (hz < 1e6) return `${+(hz / 1e3).toFixed(1)} kHz`;
+            return `${+(hz / 1e6).toFixed(3)} MHz`;
+        }
+
+        // coverage: [[lowHz, highHz], ...] from the scrapers (missing for OpenWebRX)
+        function describeCoverage(coverage) {
+            if (!Array.isArray(coverage) || coverage.length === 0) {
+                return 'Unknown';
+            }
+
+            const merged = [];
+            coverage
+                .map(([lo, hi]) => [Math.min(lo, hi), Math.max(lo, hi)])
+                .sort((a, b) => a[0] - b[0])
+                .forEach(range => {
+                    const last = merged[merged.length - 1];
+                    if (last && range[0] <= last[1]) {
+                        last[1] = Math.max(last[1], range[1]);
+                    } else {
+                        merged.push(range);
+                    }
+                });
+
+            const covered = HAM_BANDS
+                .filter(([, lo, hi]) => merged.some(([a, b]) => a < hi * 1e6 && b > lo * 1e6))
+                .map(([name]) => name);
+            // Summarize near-complete HF coverage instead of listing every band
+            const missingHF = HF_BANDS.filter(band => !covered.includes(band));
+            const others = covered.filter(band => !HF_BANDS.includes(band) && !LF_BANDS.includes(band));
+            let bands;
+            if (missingHF.length === 0) {
+                bands = ['Full HF', ...others];
+            } else if (missingHF.length <= 3) {
+                bands = [`HF except ${missingHF.join(', ')}`, ...others];
+            } else {
+                bands = covered;
+            }
+
+            const shown = merged.slice(0, 6).map(([lo, hi]) => {
+                // Same unit on both ends reads better: "3.5 – 3.8 MHz"
+                if (lo >= 1e6 || lo === 0) {
+                    return `${lo === 0 ? '0' : +(lo / 1e6).toFixed(3)} – ${formatFreq(hi)}`;
+                }
+                return `${formatFreq(lo)} – ${formatFreq(hi)}`;
+            });
+            const ranges = shown.join(' · ') + (merged.length > shown.length ? ' · …' : '');
+
+            return bands.length > 0
+                ? `${bands.join(' · ')}<br><small>${ranges}</small>`
+                : ranges;
+        }
+
         // Create markers from data
         function createMarkers(data, icon, layer) {
             let delay = 0;
@@ -1284,7 +1349,8 @@
                         <b>Max Users:</b> ${item.maxusers || 'N/A'}<br>
                         <b>Altitude:</b> ${item.altitude || 'N/A'}<br>
                         <b>Antenna:</b> ${item.antenna || 'N/A'}<br>
-                        <b>Device:</b> ${item.device || 'N/A'}
+                        <b>Device:</b> ${item.device || 'N/A'}<br>
+                        <b>Coverage:</b> ${describeCoverage(item.coverage)}
                     `;
                     
                     marker.bindPopup(popupContent);
