@@ -1212,6 +1212,33 @@
             }
         }
 
+        // Receiver names come from third-party lists and some include HTML (links, images,
+        // <br>). Reduce text fields to plain text on load and escape them on output, so a
+        // receiver can't inject markup or scripts into this page.
+        const textParser = new DOMParser();
+        const TEXT_FIELDS = ['id', 'comment', 'antenna', 'device', 'loc', 'country'];
+
+        function toPlainText(value) {
+            if (value === undefined || value === null) return '';
+            const html = String(value).replace(/<br\s*\/?>/gi, ' ');
+            return textParser.parseFromString(html, 'text/html').body.textContent.replace(/\s+/g, ' ').trim();
+        }
+
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, c => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[c]));
+        }
+
+        function safeUrl(url) {
+            try {
+                const parsed = new URL(url);
+                return ['http:', 'https:'].includes(parsed.protocol) ? parsed.href : null;
+            } catch {
+                return null;
+            }
+        }
+
         // Load and cache JSON data
         async function loadJSONData(url, type) {
             if (dataCache[type]) {
@@ -1231,6 +1258,11 @@
                 // Add type to each item and extract location
                 data.forEach(item => {
                     item.type = type;
+                    TEXT_FIELDS.forEach(field => {
+                        if (item[field] !== undefined) {
+                            item[field] = toPlainText(item[field]);
+                        }
+                    });
                     // Use location provided by the scraper (PhantomSDR+ list)
                     if (item.country) {
                         countries.add(item.country);
@@ -1342,14 +1374,15 @@
                 setTimeout(() => {
                     const marker = L.marker([item.lat, item.lon], { icon });
                     
+                    const url = safeUrl(item.url);
                     const popupContent = `
-                        <b>ID:</b> ${item.id || 'N/A'}<br>
-                        <b>Comment:</b> ${item.comment || 'N/A'}<br>
-                        <b>URL:</b> <a href="${item.url}" target="_blank" rel="noopener noreferrer">Connect to SDR</a><br>
-                        <b>Max Users:</b> ${item.maxusers || 'N/A'}<br>
-                        <b>Altitude:</b> ${item.altitude || 'N/A'}<br>
-                        <b>Antenna:</b> ${item.antenna || 'N/A'}<br>
-                        <b>Device:</b> ${item.device || 'N/A'}<br>
+                        <b>ID:</b> ${escapeHtml(item.id || 'N/A')}<br>
+                        <b>Comment:</b> ${escapeHtml(item.comment || 'N/A')}<br>
+                        <b>URL:</b> ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Connect to SDR</a>` : 'N/A'}<br>
+                        <b>Max Users:</b> ${escapeHtml(item.maxusers || 'N/A')}<br>
+                        <b>Altitude:</b> ${escapeHtml(item.altitude || 'N/A')}<br>
+                        <b>Antenna:</b> ${escapeHtml(item.antenna || 'N/A')}<br>
+                        <b>Device:</b> ${escapeHtml(item.device || 'N/A')}<br>
                         <b>Coverage:</b> ${describeCoverage(item.coverage)}
                     `;
                     
@@ -1532,11 +1565,11 @@
 
                 return `
                     <div class="search-result-item" data-lat="${sdr.lat}" data-lon="${sdr.lon}" data-type="${sdr.type}" style="border-left-color: ${typeColors[sdr.type]}">
-                        <strong>${sdr.comment || sdr.id || 'Unknown'}</strong>
+                        <strong>${escapeHtml(sdr.comment || sdr.id || 'Unknown')}</strong>
                         <small>
                             ${sdr.type.toUpperCase()} 
-                            ${sdr.device ? '• ' + sdr.device : ''} 
-                            ${sdr.country ? '• ' + sdr.country : ''}
+                            ${sdr.device ? '• ' + escapeHtml(sdr.device) : ''} 
+                            ${sdr.country ? '• ' + escapeHtml(sdr.country) : ''}
                         </small>
                     </div>
                 `;
