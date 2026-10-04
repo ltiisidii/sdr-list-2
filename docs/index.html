@@ -74,6 +74,36 @@
             padding: 2rem 1rem;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* Small support button in the header: always visible, never over the map */
+        .header-support {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.85rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .header-support:hover {
+            background: rgba(255, 255, 255, 0.28);
+            transform: translateY(-1px);
+        }
+
+        .header-support:focus-visible {
+            outline: 2px solid white;
+            outline-offset: 2px;
         }
 
         h1 {
@@ -551,6 +581,12 @@
                 font-size: 1.5rem;
             }
 
+            .header-support {
+                position: static;
+                margin-top: 0.75rem;
+                font-size: 0.8rem;
+            }
+
             h2 {
                 font-size: 1rem;
             }
@@ -586,16 +622,45 @@
             margin-bottom: 2px;
         }
 
-        .muf-legend-row {
-            display: flex;
-            align-items: center;
-            gap: 6px;
+        .muf-colorbar {
+            position: relative;
+            width: 240px;
+            height: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            margin-top: 2px;
         }
 
-        .muf-legend-swatch {
-            width: 16px;
-            height: 3px;
-            border-radius: 2px;
+        .muf-colorbar-ticks {
+            position: relative;
+            width: 240px;
+            height: 14px;
+            font-size: 0.65rem;
+        }
+
+        .muf-colorbar-ticks span {
+            position: absolute;
+            transform: translateX(-50%);
+            top: 1px;
+        }
+
+        .muf-colorbar-tick {
+            position: absolute;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        .muf-contour-label {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 3px;
+            padding: 0 3px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            white-space: nowrap;
+            line-height: 1.4;
+            transform: translate(-50%, -50%);
+            display: inline-block;
         }
 
         .muf-legend-time {
@@ -654,6 +719,9 @@
     <header>
         <h1>SDR Maps for Ham Radio Enthusiasts</h1>
         <h2>Find KiwiSDR, OpenWebRX, WebSDR, PhantomSDR+, and Web-888 Worldwide</h2>
+        <a class="header-support" href="https://cafecito.app/p00lack" target="_blank" rel="noopener" lang="es" title="Apoyar Map-SDR con un aporte voluntario">
+            <span aria-hidden="true">☕</span> Invitame un cafecito
+        </a>
     </header>
 
     <div class="container">
@@ -832,6 +900,16 @@
         let mufLayer = null;
         let mufUpdated = null;
 
+        // Same scale as KC2G: viridis under a log norm between 4 and 35 MHz
+        const MUF_SCALE_MIN = 4;
+        const MUF_SCALE_MAX = 35;
+        const VIRIDIS_STOPS = ['#440154', '#482878', '#3e4989', '#31688e', '#26828e', '#1f9e89', '#35b779', '#6ece58', '#b5de2b', '#fde725'];
+
+        function mufScaleFraction(mhz) {
+            const t = (Math.log(mhz) - Math.log(MUF_SCALE_MIN)) / (Math.log(MUF_SCALE_MAX) - Math.log(MUF_SCALE_MIN));
+            return Math.min(1, Math.max(0, t));
+        }
+
         const mufLegend = L.control({ position: 'bottomright' });
         mufLegend.onAdd = function() {
             this._div = L.DomUtil.create('div', 'muf-legend');
@@ -840,14 +918,32 @@
         };
         mufLegend.update = function() {
             if (!this._div) return;
-            const rows = Object.entries(MUF_COLORS)
-                .sort((a, b) => b[0] - a[0])
-                .map(([mhz, color]) => `<div class="muf-legend-row"><span class="muf-legend-swatch" style="background:${color}"></span>${mhz} MHz</div>`)
+            const levels = Object.keys(MUF_COLORS).map(Number).sort((a, b) => a - b);
+            const marks = [MUF_SCALE_MIN, ...levels, MUF_SCALE_MAX];
+            const gradient = `linear-gradient(to right, ${VIRIDIS_STOPS.join(', ')})`;
+            const tickLines = levels
+                .map(mhz => `<div class="muf-colorbar-tick" style="left:${(mufScaleFraction(mhz) * 100).toFixed(1)}%"></div>`)
+                .join('');
+            // Skip tick labels that would overlap a higher one (e.g. 24.8 next to 28)
+            let lastLabeled = 2;
+            const tickLabels = marks
+                .slice()
+                .reverse()
+                .filter(mhz => {
+                    const f = mufScaleFraction(mhz);
+                    const keep = lastLabeled - f > 0.08;
+                    if (keep) lastLabeled = f;
+                    return keep;
+                })
+                .map(mhz => `<span style="left:${(mufScaleFraction(mhz) * 100).toFixed(1)}%">${mhz}</span>`)
                 .join('');
             const time = mufUpdated
                 ? `${mufUpdated.toISOString().substr(11, 5)} UTC`
                 : 'loading...';
-            this._div.innerHTML = `<div class="muf-legend-title">MUF</div>${rows}<div class="muf-legend-time">${time}</div>`;
+            this._div.innerHTML = `<div class="muf-legend-title">MUF (MHz)</div>` +
+                `<div class="muf-colorbar" style="background:${gradient}">${tickLines}</div>` +
+                `<div class="muf-colorbar-ticks">${tickLabels}</div>` +
+                `<div class="muf-legend-time">${time}</div>`;
         };
 
         const MUF_SVG_URL = 'https://prop.kc2g.com/renders/current/mufd-normal-now.svg';
@@ -859,6 +955,35 @@
         map.createPane('mufRasterPane');
         map.getPane('mufRasterPane').style.zIndex = 350;
         map.getPane('mufRasterPane').style.pointerEvents = 'none';
+        // Contour labels above the lines but below the SDR markers (markerPane is 600)
+        map.createPane('mufLabelPane');
+        map.getPane('mufLabelPane').style.zIndex = 450;
+        map.getPane('mufLabelPane').style.pointerEvents = 'none';
+
+        // Point along a contour line where its label goes. Neighbouring contours start at
+        // different fractions of their length so labels don't stack, and points near the
+        // map edges (±180°) are skipped because many lines start and end there.
+        function mufLabelPosition(coords, index) {
+            const cumulative = [0];
+            for (let i = 1; i < coords.length; i++) {
+                const dx = coords[i][0] - coords[i - 1][0];
+                const dy = coords[i][1] - coords[i - 1][1];
+                cumulative.push(cumulative[i - 1] + Math.hypot(dx, dy));
+            }
+            const total = cumulative[cumulative.length - 1];
+            const fractions = [0.5, 0.35, 0.65, 0.2, 0.8];
+            const start = index % fractions.length;
+            for (let k = 0; k < fractions.length; k++) {
+                const target = total * fractions[(start + k) % fractions.length];
+                const i = cumulative.findIndex(d => d >= target);
+                const point = coords[Math.max(0, i)];
+                if (Math.abs(point[0]) < 165 && Math.abs(point[1]) < 75) {
+                    return point;
+                }
+            }
+            // Short pieces that only exist at the map edge get no label
+            return null;
+        }
 
         async function loadMUFContours() {
             const response = await fetch(MUF_URL, { cache: 'no-store' });
@@ -869,7 +994,30 @@
             const lastModified = response.headers.get('Last-Modified');
             mufUpdated = lastModified ? new Date(lastModified) : new Date();
 
-            return L.layerGroup(MUF_WORLD_OFFSETS.map(offset => L.geoJSON(data, {
+            const labels = [];
+            data.features.forEach((feature, index) => {
+                const coords = feature.geometry && feature.geometry.coordinates;
+                if (!coords || coords.length < 2) return;
+                const position = mufLabelPosition(coords, index);
+                if (!position) return;
+                const [lon, lat] = position;
+                const mhz = feature.properties['level-value'];
+                const color = MUF_COLORS[mhz] || feature.properties.stroke || '#555';
+                MUF_WORLD_OFFSETS.forEach(offset => {
+                    labels.push(L.marker([lat, lon + offset], {
+                        pane: 'mufLabelPane',
+                        interactive: false,
+                        keyboard: false,
+                        icon: L.divIcon({
+                            className: '',
+                            iconSize: null,
+                            html: `<span class="muf-contour-label" style="color:${color}">${mhz} MHz</span>`
+                        })
+                    }));
+                });
+            });
+
+            return L.layerGroup(labels.concat(MUF_WORLD_OFFSETS.map(offset => L.geoJSON(data, {
                 coordsToLatLng: coords => L.latLng(coords[1], coords[0] + offset),
                 style: feature => ({
                     color: MUF_COLORS[feature.properties['level-value']] || feature.properties.stroke || '#888',
@@ -879,7 +1027,7 @@
                 onEachFeature: (feature, l) => {
                     l.bindTooltip(`MUF ${feature.properties['level-value']} MHz`, { sticky: true });
                 }
-            })));
+            }))));
         }
 
         // KC2G embeds the colored MUF field in its SVG map as an equirectangular PNG
