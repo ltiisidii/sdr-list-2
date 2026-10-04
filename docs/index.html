@@ -13,8 +13,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDR Maps for Ham Radio Enthusiasts</title>
-    <meta name="description" content="Discover SDR maps for ham radio. Locate KiwiSDR, OpenWebRX & WebSDR worldwide. Explore frequencies & connect instantly">
-    <meta name="keywords" content="SDR maps, ham radio, KiwiSDR, OpenWebRX, WebSDR, radio defined by software, real-time SDR, global SDR map">
+    <meta name="description" content="Discover SDR maps for ham radio. Locate KiwiSDR, OpenWebRX, WebSDR & PhantomSDR+ worldwide. Explore frequencies & connect instantly">
+    <meta name="keywords" content="SDR maps, ham radio, KiwiSDR, OpenWebRX, WebSDR, PhantomSDR, UberSDR, NovaSDR, radio defined by software, real-time SDR, global SDR map">
     <meta name="robots" content="index, follow">
     <meta name="author" content="LU6EWB">
     
@@ -26,7 +26,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="SDR Maps for Ham Radio Enthusiasts">
-    <meta property="og:description" content="Map with the location of all SDRs: OpenWebRX, KiwiSDR and WebSDR">
+    <meta property="og:description" content="Map with the location of all SDRs: OpenWebRX, KiwiSDR, WebSDR and PhantomSDR+">
     <meta property="og:image" content="og_imagen.png">
     <meta property="og:url" content="https://map-sdr.p00lack.cc">
     <meta property="og:type" content="website">
@@ -34,7 +34,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SDR Maps for Ham Radio Enthusiasts">
-    <meta name="twitter:description" content="Map with the location of all SDRs: OpenWebRX, KiwiSDR and WebSDR">
+    <meta name="twitter:description" content="Map with the location of all SDRs: OpenWebRX, KiwiSDR, WebSDR and PhantomSDR+">
     <meta name="twitter:image" content="tw_imagen.png">
     
     <!-- Schema.org -->
@@ -43,7 +43,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "SDR Maps for Ham Radio Enthusiasts",
-        "description": "Discover real-time SDR maps for ham radio enthusiasts. Find locations of KiwiSDR, OpenWebRX, and WebSDR worldwide.",
+        "description": "Discover real-time SDR maps for ham radio enthusiasts. Find locations of KiwiSDR, OpenWebRX, WebSDR, and PhantomSDR+ worldwide.",
         "url": "https://map-sdr.p00lack.cc",
         "image": "https://map-sdr.p00lack.cc/og_imagen.png"
     }
@@ -620,7 +620,7 @@
 <body>
     <header>
         <h1>SDR Maps for Ham Radio Enthusiasts</h1>
-        <h2>Find KiwiSDR, OpenWebRX, and WebSDR Worldwide</h2>
+        <h2>Find KiwiSDR, OpenWebRX, WebSDR, and PhantomSDR+ Worldwide</h2>
     </header>
 
     <div class="container">
@@ -643,6 +643,7 @@
                         <option value="kiwisdr">KiwiSDR</option>
                         <option value="openwebrx">OpenWebRX</option>
                         <option value="websdr">WebSDR</option>
+                        <option value="phantomsdr">PhantomSDR+</option>
                     </select>
                     <select id="countryFilter" class="filter-select" aria-label="Filter by location">
                         <option value="all">Loading...</option>
@@ -667,6 +668,10 @@
                     <input type="checkbox" id="websdrCheckbox" aria-label="Show WebSDR stations">
                     <span>WebSDR</span>
                 </label>
+                <label class="checkbox-label" style="color: #8b5cf6;">
+                    <input type="checkbox" id="phantomsdrCheckbox" aria-label="Show PhantomSDR+ stations">
+                    <span>PhantomSDR+</span>
+                </label>
                 
                 <div class="theme-toggle" id="themeToggle">
                     <span id="themeLabel">🌙 Dark Mode</span>
@@ -690,6 +695,10 @@
                     <span style="color: #ef4444;">●</span>
                     <span>WebSDR: <span class="stat-badge" id="websdr-count">0</span></span>
                 </div>
+                <div class="stat-item">
+                    <span style="color: #8b5cf6;">●</span>
+                    <span>PhantomSDR+: <span class="stat-badge" id="phantomsdr-count">0</span></span>
+                </div>
             </div>
         </div>
 
@@ -700,7 +709,7 @@
 
         <div class="info-section">
             <h3>How to Use</h3>
-            <p>Select the type of SDR you want to view (KiwiSDR, OpenWebRX, or WebSDR). This will display the location of each SDR station on the map. Click on any marker to see detailed information and a link to connect to that station.</p>
+            <p>Select the type of SDR you want to view (KiwiSDR, OpenWebRX, WebSDR, or PhantomSDR+). This will display the location of each SDR station on the map. Click on any marker to see detailed information and a link to connect to that station.</p>
             
             <h3>About SDR Types</h3>
             <p>Learn more about each type of Software Defined Radio:</p>
@@ -708,6 +717,7 @@
                 <li><strong>KiwiSDR:</strong> <a href="http://kiwisdr.com/" target="_blank" rel="noopener noreferrer nofollow">kiwisdr.com</a></li>
                 <li><strong>OpenWebRX:</strong> <a href="https://fms.komkon.org/OWRX/" target="_blank" rel="noopener noreferrer nofollow">fms.komkon.org/OWRX</a></li>
                 <li><strong>WebSDR:</strong> <a href="http://www.websdr.org/" target="_blank" rel="noopener noreferrer nofollow">websdr.org</a></li>
+                <li><strong>PhantomSDR+ (incl. UberSDR, NovaSDR):</strong> <a href="https://sdr-list.xyz/" target="_blank" rel="noopener noreferrer nofollow">sdr-list.xyz</a></li>
             </ul>
         </div>
     </div>
@@ -785,18 +795,29 @@
             shadowSize: [41, 41]
         });
 
+        const violetIcon = new L.Icon({
+            iconUrl: '/img/marker-icon-2x-violet.png',
+            shadowUrl: '/img/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
         // Layer groups for each SDR type
         const layers = {
             kiwisdr: L.markerClusterGroup(),
             openwebrx: L.markerClusterGroup(),
-            websdr: L.markerClusterGroup()
+            websdr: L.markerClusterGroup(),
+            phantomsdr: L.markerClusterGroup()
         };
 
         // Data cache
         const dataCache = {
             kiwisdr: null,
             openwebrx: null,
-            websdr: null
+            websdr: null,
+            phantomsdr: null
         };
 
         // All SDRs combined for search
@@ -809,7 +830,8 @@
         const countEls = {
             kiwisdr: document.getElementById('kiwisdr-count'),
             openwebrx: document.getElementById('openwebrx-count'),
-            websdr: document.getElementById('websdr-count')
+            websdr: document.getElementById('websdr-count'),
+            phantomsdr: document.getElementById('phantomsdr-count')
         };
 
         // Search elements
@@ -859,8 +881,11 @@
                 // Add type to each item and extract location
                 data.forEach(item => {
                     item.type = type;
+                    // Use location provided by the scraper (PhantomSDR+ list)
+                    if (item.country) {
+                        countries.add(item.country);
                     // Extract location from comment (last part after comma)
-                    if (item.comment) {
+                    } else if (item.comment) {
                         const parts = item.comment.split(',');
                         if (parts.length > 0) {
                             // Take last 1-2 parts as location (city, country or state, country)
@@ -975,12 +1000,22 @@
             );
         });
 
+        document.getElementById('phantomsdrCheckbox').addEventListener('change', function(e) {
+            toggleLayer(
+                'phantomsdr',
+                '/phantomsdr.json',
+                violetIcon,
+                e.target.checked
+            );
+        });
+
         // Preload counts on page load
         (async function preloadCounts() {
             const urls = {
                 kiwisdr: '/kiwisdr.json',
                 openwebrx: '/openwebrx.json',
-                websdr: '/websdr.json'
+                websdr: '/websdr.json',
+                phantomsdr: '/phantomsdr.json'
             };
 
             for (const [type, url] of Object.entries(urls)) {
@@ -1064,7 +1099,8 @@
                 const typeColors = {
                     kiwisdr: '#10b981',
                     openwebrx: '#3b82f6',
-                    websdr: '#ef4444'
+                    websdr: '#ef4444',
+                    phantomsdr: '#8b5cf6'
                 };
 
                 return `
