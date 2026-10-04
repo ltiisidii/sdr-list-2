@@ -570,6 +570,39 @@
             }
         }
 
+        /* MUF legend */
+        .muf-legend {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 6px 8px;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            font-size: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .muf-legend-title {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .muf-legend-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .muf-legend-swatch {
+            width: 16px;
+            height: 3px;
+            border-radius: 2px;
+        }
+
+        .muf-legend-time {
+            margin-top: 3px;
+            opacity: 0.7;
+        }
+
         /* Custom popup styles */
         .leaflet-popup-content {
             margin: 1rem;
@@ -677,6 +710,10 @@
                     <input type="checkbox" id="web888Checkbox" aria-label="Show Web-888 stations">
                     <span>Web-888</span>
                 </label>
+                <label class="checkbox-label" style="color: #277d8e;" title="Maximum Usable Frequency (prop.kc2g.com)">
+                    <input type="checkbox" id="mufCheckbox" checked aria-label="Show MUF contours">
+                    <span>MUF</span>
+                </label>
                 
                 <div class="theme-toggle" id="themeToggle">
                     <span id="themeLabel">🌙 Dark Mode</span>
@@ -727,6 +764,7 @@
                 <li><strong>OpenWebRX:</strong> <a href="https://fms.komkon.org/OWRX/" target="_blank" rel="noopener noreferrer nofollow">fms.komkon.org/OWRX</a></li>
                 <li><strong>WebSDR:</strong> <a href="http://www.websdr.org/" target="_blank" rel="noopener noreferrer nofollow">websdr.org</a></li>
                 <li><strong>PhantomSDR+ (incl. UberSDR, NovaSDR):</strong> <a href="https://sdr-list.xyz/" target="_blank" rel="noopener noreferrer nofollow">sdr-list.xyz</a></li>
+                <li><strong>MUF map:</strong> <a href="https://prop.kc2g.com/" target="_blank" rel="noopener noreferrer nofollow">prop.kc2g.com</a></li>
                 <li><strong>Web-888:</strong> <a href="https://www.rx-888.com/web/rx.html" target="_blank" rel="noopener noreferrer nofollow">rx-888.com</a></li>
             </ul>
         </div>
@@ -776,6 +814,89 @@
                 longitudeRange: 720
             }).addTo(map);
         }, 60000);
+
+        // MUF (Maximum Usable Frequency) contours from KC2G, refreshed every 15 minutes
+        const MUF_URL = 'https://prop.kc2g.com/renders/current/mufd-normal-now.geojson';
+        const MUF_REFRESH_MS = 15 * 60 * 1000;
+        const MUF_COLORS = {
+            5.3: '#462d7c',
+            7.0: '#3a538b',
+            10.1: '#277d8e',
+            14.0: '#1fa286',
+            18.0: '#3ebc73',
+            21.0: '#62ca5f',
+            24.8: '#92d741',
+            28.0: '#b7dd29'
+        };
+        const mufCheckbox = document.getElementById('mufCheckbox');
+        let mufLayer = null;
+        let mufUpdated = null;
+
+        const mufLegend = L.control({ position: 'bottomright' });
+        mufLegend.onAdd = function() {
+            this._div = L.DomUtil.create('div', 'muf-legend');
+            this.update();
+            return this._div;
+        };
+        mufLegend.update = function() {
+            if (!this._div) return;
+            const rows = Object.entries(MUF_COLORS)
+                .sort((a, b) => b[0] - a[0])
+                .map(([mhz, color]) => `<div class="muf-legend-row"><span class="muf-legend-swatch" style="background:${color}"></span>${mhz} MHz</div>`)
+                .join('');
+            const time = mufUpdated
+                ? `${mufUpdated.toISOString().substr(11, 5)} UTC`
+                : 'loading...';
+            this._div.innerHTML = `<div class="muf-legend-title">MUF</div>${rows}<div class="muf-legend-time">${time}</div>`;
+        };
+
+        async function loadMUF() {
+            try {
+                const response = await fetch(MUF_URL, { cache: 'no-store' });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                const lastModified = response.headers.get('Last-Modified');
+                mufUpdated = lastModified ? new Date(lastModified) : new Date();
+
+                const layer = L.geoJSON(data, {
+                    style: feature => ({
+                        color: MUF_COLORS[feature.properties['level-value']] || feature.properties.stroke || '#888',
+                        weight: 2,
+                        opacity: 0.85
+                    }),
+                    onEachFeature: (feature, l) => {
+                        l.bindTooltip(`MUF ${feature.properties['level-value']} MHz`, { sticky: true });
+                    }
+                });
+
+                if (mufLayer) {
+                    map.removeLayer(mufLayer);
+                }
+                mufLayer = layer;
+                if (mufCheckbox.checked) {
+                    mufLayer.addTo(map);
+                }
+                mufLegend.update();
+            } catch (error) {
+                console.error('Error loading MUF data:', error);
+            }
+        }
+
+        mufCheckbox.addEventListener('change', function(e) {
+            if (e.target.checked) {
+                if (mufLayer) mufLayer.addTo(map);
+                mufLegend.addTo(map);
+            } else {
+                if (mufLayer) map.removeLayer(mufLayer);
+                mufLegend.remove();
+            }
+        });
+
+        mufLegend.addTo(map);
+        loadMUF();
+        setInterval(loadMUF, MUF_REFRESH_MS);
 
         // Define custom icons
         const greenIcon = new L.Icon({
