@@ -7,11 +7,17 @@
         "lon": -74.97210887312123,
         "comment": "K3FEF - K3FEF & W3TKP Radio Ranch in Milford PA",
         "url": "http://ubersdr.k3fef.com/",
-        "users": 40,
+        "users": 46,
         "maxusers": 200,
         "loc": "FN21mh",
         "country": "Dingman Township, United States",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -21,11 +27,17 @@
         "lon": -13.883843213550012,
         "comment": "EA8-DF4UE - RX888@Loop",
         "url": "http://ea8-df4ue.tunnel.ubersdr.org/",
-        "users": 33,
+        "users": 28,
         "maxusers": 50,
         "loc": "IL38bp",
         "country": "La Oliva, Spain",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -39,7 +51,13 @@
         "maxusers": 100,
         "loc": "JM78SD",
         "country": "Messina, Italy",
-        "device": "NovaSDR 0.3.7"
+        "device": "NovaSDR 0.3.7",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -49,11 +67,17 @@
         "lon": -83.96996650644694,
         "comment": "NY4Q - RX888MKII / Fan Dipole",
         "url": "http://websdr.lumpkinschools.com/",
-        "users": 15,
+        "users": 17,
         "maxusers": 500,
         "loc": "EM84am",
         "country": "Dahlonega, United States",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -63,11 +87,17 @@
         "lon": 8.628056382085909,
         "comment": "HB9RYZ-1 - UberSDR Rigi Scheidegg at 1'660m 0-30 MHz - RX888 - operated by HB9RYZ",
         "url": "http://phantomsdr.rigiremote.ch/",
-        "users": 13,
+        "users": 14,
         "maxusers": 50,
         "loc": "JN47ha",
         "country": "Schwyz, Switzerland",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -81,7 +111,53 @@
         "maxusers": 100,
         "loc": "KM17VX",
         "country": "Municipal Unit of Papagou, Greece",
-        "device": "PhantomSDR+ v.5.0.0"
+        "device": "PhantomSDR+ v.5.0.0",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "sardinia-sdr.ddns.net",
+        "lat": 40.829940756847485,
+        "lon": 8.944161058976118,
+        "comment": "IS0-HB3XDC - WebSDR Sardinia - Perfugas",
+        "url": "http://sardinia-sdr.ddns.net/",
+        "users": 7,
+        "maxusers": 30,
+        "loc": "JN40lt",
+        "country": "P\u00e8ifugas/Perfugas, Italy",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "websdr.heppen.be",
+        "lat": 51.106168955519955,
+        "lon": 5.189557106889448,
+        "comment": "HEPPEN - Wideband Websdr by Bas ON5HB and Marian ON3MS",
+        "url": "http://websdr.heppen.be/",
+        "users": 6,
+        "maxusers": 50,
+        "loc": "JO21oc",
+        "country": "Leopoldsburg, Belgium",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -95,21 +171,13 @@
         "maxusers": 60,
         "loc": "GH64cg",
         "country": "Lago Norte, Brazil",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "sardinia-sdr.ddns.net",
-        "lat": 40.829940756847485,
-        "lon": 8.944161058976118,
-        "comment": "IS0-HB3XDC - WebSDR Sardinia - Perfugas",
-        "url": "http://sardinia-sdr.ddns.net/",
-        "users": 6,
-        "maxusers": 30,
-        "loc": "JN40lt",
-        "country": "P\u00e8ifugas/Perfugas, Italy",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -123,7 +191,13 @@
         "maxusers": 1000,
         "loc": "KO89XC",
         "country": "Cherepovets, Russia",
-        "device": "PhantomSDR+"
+        "device": "PhantomSDR+",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -137,7 +211,53 @@
         "maxusers": 100,
         "loc": "JN47GA",
         "country": "",
-        "device": "PhantomSDR+"
+        "device": "PhantomSDR+",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "hamradio.sv2yj.live:9002",
+        "lat": 40.59966372930496,
+        "lon": 22.467398107881287,
+        "comment": "SV2YJ Alexandria GR",
+        "url": "http://hamradio.sv2yj.live:9002/",
+        "users": 4,
+        "maxusers": 20,
+        "loc": "KN10FO",
+        "country": "Alexandreia, Greece",
+        "device": "PhantomSDR+ v.4.2.0",
+        "coverage": [
+            [
+                0,
+                28000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "wessex.zapto.org",
+        "lat": 50.74599340047303,
+        "lon": -2.630396505683986,
+        "comment": "WESSEX - Terminated delta loop",
+        "url": "http://wessex.zapto.org/",
+        "users": 4,
+        "maxusers": 20,
+        "loc": "IO80qr",
+        "country": "Litton Cheney, United Kingdom",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                60000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -151,63 +271,13 @@
         "maxusers": 100,
         "loc": "JN86da",
         "country": "Mirkovec Brezni\u010dki, Hrvatska",
-        "device": "PhantomSDR+ v.5.0.0"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "websdr.heppen.be",
-        "lat": 51.106168955519955,
-        "lon": 5.189557106889448,
-        "comment": "HEPPEN - Wideband Websdr by Bas ON5HB and Marian ON3MS",
-        "url": "http://websdr.heppen.be/",
-        "users": 3,
-        "maxusers": 50,
-        "loc": "JO21oc",
-        "country": "Leopoldsburg, Belgium",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "sv1btl.tunnel.ubersdr.org",
-        "lat": 38.00666716258488,
-        "lon": 23.803859540703442,
-        "comment": "SV1BTL - SV1BTL UberSDR",
-        "url": "http://sv1btl.tunnel.ubersdr.org/",
-        "users": 3,
-        "maxusers": 50,
-        "loc": "KM18va",
-        "country": "Municipality of Chalandri, Greece",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "hamradio.sv2yj.live:9002",
-        "lat": 40.59966372930496,
-        "lon": 22.467398107881287,
-        "comment": "SV2YJ Alexandria GR",
-        "url": "http://hamradio.sv2yj.live:9002/",
-        "users": 3,
-        "maxusers": 20,
-        "loc": "KN10FO",
-        "country": "Alexandreia, Greece",
-        "device": "PhantomSDR+ v.4.2.0"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "sv2srx.hopto.org:8901",
-        "lat": 40.468665102616924,
-        "lon": 23.619786602578774,
-        "comment": "SV2SRX PhantomSDR+ Neochori Chalkidiki GR",
-        "url": "http://sv2srx.hopto.org:8901/",
-        "users": 3,
-        "maxusers": 100,
-        "loc": "kn10tl",
-        "country": "Arnea, Greece",
-        "device": "PhantomSDR+"
+        "device": "PhantomSDR+ v.5.0.0",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -221,35 +291,73 @@
         "maxusers": 100,
         "loc": "NO13TH",
         "country": "Barnaul, Russia",
-        "device": "22DX-Server 22DX-Server"
+        "device": "22DX-Server 22DX-Server",
+        "coverage": [
+            [
+                3094000,
+                4630000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
         "id": "sdr.22dx.ru:8901",
-        "lat": 53.30027965972381,
-        "lon": 83.64001579308766,
+        "lat": 53.29326661326009,
+        "lon": 83.61051461051346,
         "comment": "22dx.ru VertexSDR in Barnaul city, Altai region, Russia",
         "url": "http://sdr.22dx.ru:8901/",
-        "users": 2,
+        "users": 3,
         "maxusers": 100,
         "loc": "NO13TH",
         "country": "Barnaul, Russia",
-        "device": "22DX-Server 22DX-Server"
+        "device": "22DX-Server 22DX-Server",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
-        "id": "oe9ghv.instance.ubersdr.org",
-        "lat": 47.426404554818035,
-        "lon": 9.859934157320517,
-        "comment": "OE9GHV - Radiohill",
-        "url": "http://oe9ghv.instance.ubersdr.org/",
+        "id": "sv2srx.hopto.org:8901",
+        "lat": 40.468665102616924,
+        "lon": 23.619786602578774,
+        "comment": "SV2SRX PhantomSDR+ Neochori Chalkidiki GR",
+        "url": "http://sv2srx.hopto.org:8901/",
         "users": 2,
-        "maxusers": 20,
-        "loc": "JN47wk",
-        "country": "Egg, Austria",
-        "device": "UberSDR 0.1.66"
+        "maxusers": 100,
+        "loc": "kn10tl",
+        "country": "Arnea, Greece",
+        "device": "PhantomSDR+",
+        "coverage": [
+            [
+                0,
+                8000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "ubersdr.k3gmq.com",
+        "lat": 40.297421950103,
+        "lon": -75.04246471351185,
+        "comment": "K3GMQ - Northeast Corridor HF SDR",
+        "url": "http://ubersdr.k3gmq.com/",
+        "users": 2,
+        "maxusers": 100,
+        "loc": "FN20lh",
+        "country": "Buckingham Township, United States",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -263,203 +371,73 @@
         "maxusers": 20,
         "loc": "JN87aq",
         "country": "Grafenbach-St. Valentin, Austria",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
-        "id": "wessex.zapto.org",
-        "lat": 50.74599340047303,
-        "lon": -2.630396505683986,
-        "comment": "WESSEX - Terminated delta loop",
-        "url": "http://wessex.zapto.org/",
+        "id": "dig647.tunnel.ubersdr.org",
+        "lat": 51.20189383535515,
+        "lon": 6.467881513694973,
+        "comment": "DIG647 - SDR with Active Loop",
+        "url": "http://dig647.tunnel.ubersdr.org/",
         "users": 2,
         "maxusers": 20,
-        "loc": "IO80qr",
-        "country": "Litton Cheney, United Kingdom",
-        "device": "UberSDR 0.1.66"
+        "loc": "JO31fe",
+        "country": "M\u00f6nchengladbach, Germany",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
-        "id": "na5b.com:8080",
-        "lat": 38.78341317616541,
-        "lon": -77.20366071564813,
-        "comment": "NA5B - NA5B SDR with Multiband Antenna",
-        "url": "http://na5b.com:8080/",
+        "id": "sv1btl.tunnel.ubersdr.org",
+        "lat": 38.00666716258488,
+        "lon": 23.803859540703442,
+        "comment": "SV1BTL - SV1BTL UberSDR",
+        "url": "http://sv1btl.tunnel.ubersdr.org/",
         "users": 2,
-        "maxusers": 100,
-        "loc": "FM18js",
-        "country": "Springfield, United States",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "vu24dx.tunnel.ubersdr.org",
-        "lat": 11.30395037003128,
-        "lon": 75.69152185854888,
-        "comment": "VU24DX - SDR with Loop On Ground",
-        "url": "http://vu24dx.tunnel.ubersdr.org/",
-        "users": 1,
         "maxusers": 50,
-        "loc": "MK71uh",
-        "country": "Kozhikode, India",
-        "device": "UberSDR 0.1.66"
+        "loc": "KM18va",
+        "country": "Municipality of Chalandri, Greece",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
-        "id": "n7qxb.tunnel.ubersdr.org",
-        "lat": 40.67352182040131,
-        "lon": -111.81151529716944,
-        "comment": "N7QXB - N7QXB Salt Lake City Utah DN40",
-        "url": "http://n7qxb.tunnel.ubersdr.org/",
+        "id": "ve4drk.tunnel.ubersdr.org",
+        "lat": 49.84775940337225,
+        "lon": -97.02462264438849,
+        "comment": "VE4DRK - VE4DRK-proxmox",
+        "url": "http://ve4drk.tunnel.ubersdr.org/",
         "users": 1,
         "maxusers": 20,
-        "loc": "DN40cq",
-        "country": "Millcreek, United States",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "ubersdr.k3gmq.com",
-        "lat": 40.297421950103,
-        "lon": -75.04246471351185,
-        "comment": "K3GMQ - Northeast Corridor HF SDR",
-        "url": "http://ubersdr.k3gmq.com/",
-        "users": 1,
-        "maxusers": 100,
-        "loc": "FN20lh",
-        "country": "Buckingham Township, United States",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "on6ure-tel.tunnel.ubersdr.org",
-        "lat": 51.132700503547724,
-        "lon": 2.798560387579156,
-        "comment": "ON6URE-TEL - SDR with 2 Active RF.Guru Antennas",
-        "url": "http://on6ure-tel.tunnel.ubersdr.org/",
-        "users": 1,
-        "maxusers": 60,
-        "loc": "JO11jd",
-        "country": "Nieuwpoort, Belgium",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "airsdr.tunnel.ubersdr.org",
-        "lat": 45.810989662012666,
-        "lon": 9.471999618524451,
-        "comment": "AIRSDR - AIR - Associazione Italiana Radioascolto - Public SDR",
-        "url": "http://airsdr.tunnel.ubersdr.org/",
-        "users": 1,
-        "maxusers": 50,
-        "loc": "JN45rt",
-        "country": "Calolziocorte, Italy",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "hb9ryz.tunnel.ubersdr.org",
-        "lat": 47.17273628595407,
-        "lon": 8.459641031509879,
-        "comment": "HB9RYZ - UberSDR Server 0-30 MHz at JN47FE with RX888 MK2 SDR",
-        "url": "http://hb9ryz.tunnel.ubersdr.org/",
-        "users": 1,
-        "maxusers": 20,
-        "loc": "JN47fe",
-        "country": "Cham, Switzerland",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "kb5avy.tunnel.ubersdr.org",
-        "lat": 30.00554715037766,
-        "lon": -90.12362699320974,
-        "comment": "KB5AVY -  NEW ORLEANS LINKED REPEATER SYSTEM AND ALL-BAND RECEIVER AT THE FOOT OF LAKE PONTCHARTRAIN ",
-        "url": "http://kb5avy.tunnel.ubersdr.org/",
-        "users": 1,
-        "maxusers": 20,
-        "loc": "EM40wa",
-        "country": "Metairie, United States",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "n2epe.tunnel.ubersdr.org",
-        "lat": 43.043040169375146,
-        "lon": -77.55024559395741,
-        "comment": "N2EPE - RX888 - Horizontal Loop",
-        "url": "http://n2epe.tunnel.ubersdr.org/",
-        "users": 1,
-        "maxusers": 10,
-        "loc": "FN13fb",
-        "country": "Town of Pittsford, United States",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "sdr.meucorp.net",
-        "lat": 48.26899767299916,
-        "lon": -3.540941252765698,
-        "comment": "P0HER - Le WebSDR du Poher (HF)",
-        "url": "http://sdr.meucorp.net/",
-        "users": 1,
-        "maxusers": 32,
-        "loc": "IN88fg",
-        "country": "Carhaix-Plouguer, France",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "orsat.ddns.net:8080",
-        "lat": 43.716745517662325,
-        "lon": -1.0353521782253758,
-        "comment": "PhantomSDR ORSAT",
-        "url": "http://orsat.ddns.net:8080/",
-        "users": 1,
-        "maxusers": 100,
-        "loc": "IN93LR",
-        "country": "Saint-Paul-l\u00e8s-Dax, France",
-        "device": "PhantomSDR+ v.4.2.0"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "sdr.22dx.ru:8901",
-        "lat": 53.29326661326009,
-        "lon": 83.61051461051346,
-        "comment": "22dx.ru VertexSDR in Barnaul city, Altai region, Russia",
-        "url": "http://sdr.22dx.ru:8901/",
-        "users": 1,
-        "maxusers": 100,
-        "loc": "NO13TH",
-        "country": "Barnaul, Russia",
-        "device": "22DX-Server 22DX-Server"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "pd2rps.tunnel.ubersdr.org",
-        "lat": 52.93497158007172,
-        "lon": 5.781632639047837,
-        "comment": "PD2RPS - RX-888 MkII SDR, GPSDO, HyEndFed Multiband 40/20/10M",
-        "url": "http://pd2rps.tunnel.ubersdr.org/",
-        "users": 1,
-        "maxusers": 20,
-        "loc": "JO22vw",
-        "country": "Scharsterbrug, Netherlands",
-        "device": "UberSDR 0.1.66"
+        "loc": "EN19lu",
+        "country": "Winnipeg, Canada",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -473,105 +451,13 @@
         "maxusers": 20,
         "loc": "JN77pa",
         "country": "S\u00f6dingberg, Austria",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "hfsdr.gr",
-        "lat": 40.01214026855879,
-        "lon": 20.461018616006715,
-        "comment": ".: [RX888] HF WebSDR in Pogoniani, Ioaninna Greece :.",
-        "url": "http://hfsdr.gr/",
-        "users": 1,
-        "maxusers": 100,
-        "loc": "KN00FA",
-        "country": "\u039c\u03b5\u03c1\u03cc\u03c0\u03b7, Greece",
-        "device": "PhantomSDR+ v.4.2.0"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "m9psy.tunnel.ubersdr.org",
-        "lat": 56.02425349050126,
-        "lon": -3.379509040970474,
-        "comment": "M9PSY - RX888 with end-fed long wire (GPSDO)",
-        "url": "http://m9psy.tunnel.ubersdr.org/",
-        "users": 1,
-        "maxusers": 20,
-        "loc": "IO86ha",
-        "country": "Rosyth, United Kingdom",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "dig647.tunnel.ubersdr.org",
-        "lat": 51.20189383535515,
-        "lon": 6.467881513694973,
-        "comment": "DIG647 - SDR with Active Loop",
-        "url": "http://dig647.tunnel.ubersdr.org/",
-        "users": 1,
-        "maxusers": 20,
-        "loc": "JO31fe",
-        "country": "M\u00f6nchengladbach, Germany",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "m9twm-1.tunnel.ubersdr.org",
-        "lat": 53.393235332265206,
-        "lon": -1.5269371328297856,
-        "comment": "M9TWM-1 - Loxley on the Air",
-        "url": "http://m9twm-1.tunnel.ubersdr.org/",
-        "users": 1,
-        "maxusers": 20,
-        "loc": "IO93fj",
-        "country": "Sheffield, United Kingdom",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "ei4hq.tunnel.ubersdr.org",
-        "lat": 51.842947318226905,
-        "lon": -8.291337376974138,
-        "comment": "EI4HQ - OARC UberSDR, 80M EFHW",
-        "url": "http://ei4hq.tunnel.ubersdr.org/",
-        "users": 1,
-        "maxusers": 20,
-        "loc": "IO51uu",
-        "country": "County Cork, Ireland",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "wt8p.tunnel.ubersdr.org",
-        "lat": 47.55110852979324,
-        "lon": -122.04156687266345,
-        "comment": "WT8P - WT8PSDR",
-        "url": "http://wt8p.tunnel.ubersdr.org/",
-        "users": 1,
-        "maxusers": 20,
-        "loc": "CN87xn",
-        "country": "Sammamish, United States",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "ki4fbl.tunnel.ubersdr.org",
-        "lat": 38.43205283436332,
-        "lon": -82.70741382467384,
-        "comment": "KI4FBL - rx888 mk2 longwire",
-        "url": "http://ki4fbl.tunnel.ubersdr.org/",
-        "users": 1,
-        "maxusers": 20,
-        "loc": "EM88pk",
-        "country": "Summit, United States",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -585,133 +471,53 @@
         "maxusers": 100,
         "loc": "JO62RE",
         "country": "",
-        "device": "PhantomSDR+ v.3.3.3"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "g4eyr.tunnel.ubersdr.org",
-        "lat": 50.86520412756543,
-        "lon": -0.20598924238956284,
-        "comment": "G4EYR - Wellgood Loop 0-30MHz RX-888",
-        "url": "http://g4eyr.tunnel.ubersdr.org/",
-        "users": 0,
-        "maxusers": 20,
-        "loc": "IO90vu",
-        "country": "Portslade by Sea, United Kingdom",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "sdr.sv9djo.eu:8080",
-        "lat": 34.99285980773633,
-        "lon": 25.54887594415198,
-        "comment": "SV9DJO",
-        "url": "http://sdr.sv9djo.eu:8080/",
-        "users": 0,
-        "maxusers": 100,
-        "loc": "KM24sx",
-        "country": "Municipality of Viannos, Greece",
-        "device": "PhantomSDR+ v.4.2.0"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "pu5asf-1.tunnel.ubersdr.org",
-        "lat": -27.638649080643933,
-        "lon": -48.70316510261692,
-        "comment": "PU5ASF-1 - RX888MK2",
-        "url": "http://pu5asf-1.tunnel.ubersdr.org/",
-        "users": 0,
-        "maxusers": 20,
-        "loc": "GG52pi",
-        "country": "Palho\u00e7a, Brazil",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "rocksdr.tunnel.ubersdr.org",
-        "lat": 51.53597608148318,
-        "lon": -0.1319919890135043,
-        "comment": "ROCKSDR - SDR with Active Loop",
-        "url": "http://rocksdr.tunnel.ubersdr.org/",
-        "users": 0,
-        "maxusers": 20,
-        "loc": "IO91wm",
-        "country": "Greater London, United Kingdom",
-        "device": "UberSDR 0.1.66"
+        "device": "PhantomSDR+ v.3.3.3",
+        "coverage": [
+            [
+                0,
+                32000000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
         "id": "sdr.22dx.ru:8901",
-        "lat": 53.3102932402533,
-        "lon": 83.62469451438163,
+        "lat": 53.30027965972381,
+        "lon": 83.64001579308766,
         "comment": "22dx.ru VertexSDR in Barnaul city, Altai region, Russia",
         "url": "http://sdr.22dx.ru:8901/",
-        "users": 0,
+        "users": 1,
         "maxusers": 100,
         "loc": "NO13TH",
         "country": "Barnaul, Russia",
-        "device": "22DX-Server 22DX-Server"
+        "device": "22DX-Server 22DX-Server",
+        "coverage": [
+            [
+                13983000,
+                14367000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
-        "id": "radio-crep.tail4af5c4.ts.net",
-        "lat": 20.136648317692835,
-        "lon": -98.72498306248569,
-        "comment": "Radio CREP SDR | 0-2.100 MHz / 6.925-7.485 MHz",
-        "url": "http://radio-crep.tail4af5c4.ts.net/",
-        "users": 0,
-        "maxusers": 50,
-        "loc": "EL00PD",
-        "country": "Camelia (Barrio la Camelia), Mexico",
-        "device": "NovaSDR 0.3.7"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "pp5rca.tunnel.ubersdr.org",
-        "lat": -26.94856492713817,
-        "lon": -48.722177843900205,
-        "comment": "PP5RCA - SDR Itajai",
-        "url": "http://pp5rca.tunnel.ubersdr.org/",
-        "users": 0,
-        "maxusers": 50,
-        "loc": "GG53pb",
-        "country": "Itaja\u00ed, Brazil",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "onl-odk.tunnel.ubersdr.org",
-        "lat": 51.159677233539334,
-        "lon": 2.713701762417029,
-        "comment": "ONL-ODK - Active Loop SDR",
-        "url": "http://onl-odk.tunnel.ubersdr.org/",
-        "users": 0,
+        "id": "ki4fbl.tunnel.ubersdr.org",
+        "lat": 38.43205283436332,
+        "lon": -82.70741382467384,
+        "comment": "KI4FBL - rx888 mk2 longwire",
+        "url": "http://ki4fbl.tunnel.ubersdr.org/",
+        "users": 1,
         "maxusers": 20,
-        "loc": "JO11id",
-        "country": "Nieuwpoort, Belgium",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "81.56.36.28:28888",
-        "lat": 39.22882028686961,
-        "lon": 9.108574273289083,
-        "comment": "NovaSDR - Cagliari",
-        "url": "http://81.56.36.28:28888/",
-        "users": 0,
-        "maxusers": 100,
-        "loc": "JM49nf",
-        "country": "",
-        "device": "NovaSDR 0.3.7"
+        "loc": "EM88pk",
+        "country": "Summit, United States",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -721,11 +527,37 @@
         "lon": 83.63841969939728,
         "comment": "22dx.ru VertexSDR in Barnaul city, Altai region, Russia",
         "url": "http://sdr.22dx.ru:8901/",
-        "users": 0,
+        "users": 1,
         "maxusers": 100,
         "loc": "NO13TH",
         "country": "Barnaul, Russia",
-        "device": "22DX-Server 22DX-Server"
+        "device": "22DX-Server 22DX-Server",
+        "coverage": [
+            [
+                6990000,
+                7374000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "na5b.com:8080",
+        "lat": 38.78341317616541,
+        "lon": -77.20366071564813,
+        "comment": "NA5B - NA5B SDR with Multiband Antenna",
+        "url": "http://na5b.com:8080/",
+        "users": 1,
+        "maxusers": 100,
+        "loc": "FM18js",
+        "country": "Springfield, United States",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -735,53 +567,177 @@
         "lon": 77.61299389639125,
         "comment": "VU2CPL - SDR with Active Loop",
         "url": "http://vu2cpl.tunnel.ubersdr.org/",
-        "users": 0,
+        "users": 1,
         "maxusers": 50,
         "loc": "MK83te",
         "country": "Tarabanahalli, India",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
-        "id": "reading-ubersdr.m0lte.uk",
-        "lat": 51.49346650644694,
-        "lon": -0.9689349965667201,
-        "comment": "M0LTE - SDR with Active Loop",
-        "url": "http://reading-ubersdr.m0lte.uk/",
-        "users": 0,
+        "id": "n2epe.tunnel.ubersdr.org",
+        "lat": 43.043040169375146,
+        "lon": -77.55024559395741,
+        "comment": "N2EPE - RX888 - Horizontal Loop",
+        "url": "http://n2epe.tunnel.ubersdr.org/",
+        "users": 1,
+        "maxusers": 10,
+        "loc": "FN13fb",
+        "country": "Town of Pittsford, United States",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "on6ure-tel.tunnel.ubersdr.org",
+        "lat": 51.132700503547724,
+        "lon": 2.798560387579156,
+        "comment": "ON6URE-TEL - SDR with 2 Active RF.Guru Antennas",
+        "url": "http://on6ure-tel.tunnel.ubersdr.org/",
+        "users": 1,
+        "maxusers": 60,
+        "loc": "JO11jd",
+        "country": "Nieuwpoort, Belgium",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "ei4hq.tunnel.ubersdr.org",
+        "lat": 51.842947318226905,
+        "lon": -8.291337376974138,
+        "comment": "EI4HQ - OARC UberSDR, 80M EFHW",
+        "url": "http://ei4hq.tunnel.ubersdr.org/",
+        "users": 1,
         "maxusers": 20,
-        "loc": "IO91ml",
-        "country": "Reading, United Kingdom",
-        "device": "UberSDR 0.1.66"
+        "loc": "IO51uu",
+        "country": "County Cork, Ireland",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
-        "id": "va3rom.tunnel.ubersdr.org",
-        "lat": 48.430240672922864,
-        "lon": -89.22081918059052,
-        "comment": "VA3ROM - RX-888 MKII + GPSDO + Vertical",
-        "url": "http://va3rom.tunnel.ubersdr.org/",
-        "users": 0,
+        "id": "oe9ghv.instance.ubersdr.org",
+        "lat": 47.426404554818035,
+        "lon": 9.859934157320517,
+        "comment": "OE9GHV - Radiohill",
+        "url": "http://oe9ghv.instance.ubersdr.org/",
+        "users": 1,
         "maxusers": 20,
-        "loc": "EN58jk",
-        "country": "Thunder Bay, Canada",
-        "device": "UberSDR 0.1.66"
+        "loc": "JN47wk",
+        "country": "Egg, Austria",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
-        "id": "f4vtq.tunnel.ubersdr.org",
-        "lat": 48.9812891966125,
-        "lon": 5.719390936140993,
-        "comment": "F4VTQ - SDR with Active Loop",
-        "url": "http://f4vtq.tunnel.ubersdr.org/",
-        "users": 0,
-        "maxusers": 2,
-        "loc": "JN28ux",
-        "country": "Vigneulles-l\u00e8s-Hattonch\u00e2tel, France",
-        "device": "UberSDR 0.1.66"
+        "id": "wt8p.tunnel.ubersdr.org",
+        "lat": 47.55110852979324,
+        "lon": -122.04156687266345,
+        "comment": "WT8P - WT8PSDR",
+        "url": "http://wt8p.tunnel.ubersdr.org/",
+        "users": 1,
+        "maxusers": 20,
+        "loc": "CN87xn",
+        "country": "Sammamish, United States",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "pd2rps.tunnel.ubersdr.org",
+        "lat": 52.93497158007172,
+        "lon": 5.781632639047837,
+        "comment": "PD2RPS - RX-888 MkII SDR, GPSDO, HyEndFed Multiband 40/20/10M",
+        "url": "http://pd2rps.tunnel.ubersdr.org/",
+        "users": 1,
+        "maxusers": 20,
+        "loc": "JO22vw",
+        "country": "Scharsterbrug, Netherlands",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "hb9ryz.tunnel.ubersdr.org",
+        "lat": 47.17273628595407,
+        "lon": 8.459641031509879,
+        "comment": "HB9RYZ - UberSDR Server 0-30 MHz at JN47FE with RX888 MK2 SDR",
+        "url": "http://hb9ryz.tunnel.ubersdr.org/",
+        "users": 1,
+        "maxusers": 20,
+        "loc": "JN47fe",
+        "country": "Cham, Switzerland",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "kb5avy.tunnel.ubersdr.org",
+        "lat": 30.00554715037766,
+        "lon": -90.12362699320974,
+        "comment": "KB5AVY -  NEW ORLEANS LINKED REPEATER SYSTEM AND ALL-BAND RECEIVER AT THE FOOT OF LAKE PONTCHARTRAIN ",
+        "url": "http://kb5avy.tunnel.ubersdr.org/",
+        "users": 1,
+        "maxusers": 20,
+        "loc": "EM40wa",
+        "country": "Metairie, United States",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -795,7 +751,13 @@
         "maxusers": 20,
         "loc": "EL29ds",
         "country": "Harris County, United States",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -809,7 +771,13 @@
         "maxusers": 25,
         "loc": "EM79wp",
         "country": "Centerville, United States",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -823,133 +791,33 @@
         "maxusers": 100,
         "loc": "NO13TH",
         "country": "Barnaul, Russia",
-        "device": "22DX-Server 22DX-Server"
+        "device": "22DX-Server 22DX-Server",
+        "coverage": [
+            [
+                432976000,
+                435024000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
-        "id": "novasdr.iw9gdc.it",
-        "lat": 38.13987529564355,
-        "lon": 15.55966468299382,
-        "comment": "IW9GDC - Messina, IT (RX888 MK2)",
-        "url": "http://novasdr.iw9gdc.it/",
+        "id": "airsdr.tunnel.ubersdr.org",
+        "lat": 45.810989662012666,
+        "lon": 9.471999618524451,
+        "comment": "AIRSDR - AIR - Associazione Italiana Radioascolto - Public SDR",
+        "url": "http://airsdr.tunnel.ubersdr.org/",
         "users": 0,
-        "maxusers": 100,
-        "loc": "JM78SD",
-        "country": "Messina, Italy",
-        "device": "NovaSDR 0.3.7"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "m9psy-1.instance.ubersdr.org",
-        "lat": 56.02226127260243,
-        "lon": -3.3934295414663924,
-        "comment": "M9PSY-1 - RX888 with 40m Full Wave Loop (GPSDO)",
-        "url": "http://m9psy-1.instance.ubersdr.org/",
-        "users": 0,
-        "maxusers": 20,
-        "loc": "IO86ha",
-        "country": "Rosyth, United Kingdom",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "g4wnc.tunnel.ubersdr.org",
-        "lat": 50.86232688639659,
-        "lon": -1.788314869916838,
-        "comment": "G4WNC - SDR with Active Loop",
-        "url": "http://g4wnc.tunnel.ubersdr.org/",
-        "users": 0,
-        "maxusers": 20,
-        "loc": "IO90cu",
-        "country": "New Forest, United Kingdom",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "g7taj.instance.ubersdr.org",
-        "lat": 51.158952735179675,
-        "lon": -3.0295568017090106,
-        "comment": "G7TAJ - UberSDR (wet string currently)",
-        "url": "http://g7taj.instance.ubersdr.org/",
-        "users": 0,
-        "maxusers": 5,
-        "loc": "IO81ld",
-        "country": "Wembdon, United Kingdom",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "f5vbd.tunnel.ubersdr.org",
-        "lat": 45.58565594720379,
-        "lon": 5.964746089875638,
-        "comment": "F5VBD - RX888-MKII with Active E-Field Antenna",
-        "url": "http://f5vbd.tunnel.ubersdr.org/",
-        "users": 0,
-        "maxusers": 10,
-        "loc": "JN25xo",
-        "country": "Saint-Jean-d'Arvey, France",
-        "device": "UberSDR 0.1.61"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "ph5hp.tunnel.ubersdr.org",
-        "lat": 53.23892481116961,
-        "lon": 5.857145418478676,
-        "comment": "PH5HP - RX-888 SDR with Wellbrook ALA1530 Loop Antenna 6m height",
-        "url": "http://ph5hp.tunnel.ubersdr.org/",
-        "users": 0,
-        "maxusers": 25,
-        "loc": "JO23wf",
-        "country": "Gytsjerk, Netherlands",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "m0xdk-1.tunnel.ubersdr.org",
-        "lat": 52.307338483253226,
-        "lon": -0.9578844129091325,
-        "comment": "M0XDK-1 - SDR with Active Loop",
-        "url": "http://m0xdk-1.tunnel.ubersdr.org/",
-        "users": 0,
-        "maxusers": 10,
-        "loc": "IO92mh",
-        "country": "West Northamptonshire, United Kingdom",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "kk4fl.tunnel.ubersdr.org",
-        "lat": 37.86932955672542,
-        "lon": -76.3686629282063,
-        "comment": "KK4FL - 300' Open wire",
-        "url": "http://kk4fl.tunnel.ubersdr.org/",
-        "users": 0,
-        "maxusers": 20,
-        "loc": "FM17tu",
-        "country": "Northumberland County, United States",
-        "device": "UberSDR 0.1.66"
-    },
-    {
-        "type": "latlon",
-        "mode": "PhantomSDR",
-        "id": "zp6kfx.tunnel.ubersdr.org",
-        "lat": -25.318793125810636,
-        "lon": -57.357603189135574,
-        "comment": "ZP6KFX - WSPR Aregu\u00e1",
-        "url": "http://zp6kfx.tunnel.ubersdr.org/",
-        "users": 0,
-        "maxusers": 10,
-        "loc": "GG14hq",
-        "country": "Aregu\u00e1, Paraguay",
-        "device": "UberSDR 0.1.66"
+        "maxusers": 50,
+        "loc": "JN45rt",
+        "country": "Calolziocorte, Italy",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -963,49 +831,133 @@
         "maxusers": 10,
         "loc": "IO80xs",
         "country": "Corfe Mullen, United Kingdom",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
-        "id": "gi3jmc.tunnel.ubersdr.org",
-        "lat": 55.06801430533303,
-        "lon": -6.540762417029069,
-        "comment": "GI3JMC - RX-888 with 9:1 random wire",
-        "url": "http://gi3jmc.tunnel.ubersdr.org/",
+        "id": "m9twm-1.tunnel.ubersdr.org",
+        "lat": 53.393235332265206,
+        "lon": -1.5269371328297856,
+        "comment": "M9TWM-1 - Loxley on the Air",
+        "url": "http://m9twm-1.tunnel.ubersdr.org/",
         "users": 0,
         "maxusers": 20,
-        "loc": "IO65rb",
-        "country": "Balnamore, United Kingdom",
-        "device": "UberSDR 0.1.66"
+        "loc": "IO93fj",
+        "country": "Sheffield, United Kingdom",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
-        "id": "k1jfj.tunnel.ubersdr.org",
-        "lat": 38.304304989700164,
-        "lon": -79.61269115739681,
-        "comment": "K1JFJ - National Radio Quiet Zone SDR. 95 Xeon cores. 385GB RAM.",
-        "url": "http://k1jfj.tunnel.ubersdr.org/",
+        "id": "81.56.36.28:28888",
+        "lat": 39.22882028686961,
+        "lon": 9.108574273289083,
+        "comment": "NovaSDR - Cagliari",
+        "url": "http://81.56.36.28:28888/",
         "users": 0,
-        "maxusers": 60,
-        "loc": "FM08eh",
-        "country": "Monterey, United States",
-        "device": "UberSDR 0.1.66"
+        "maxusers": 100,
+        "loc": "JM49nf",
+        "country": "",
+        "device": "NovaSDR 0.3.7",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "PhantomSDR",
-        "id": "ve4drk.tunnel.ubersdr.org",
-        "lat": 49.84775940337225,
-        "lon": -97.02462264438849,
-        "comment": "VE4DRK - VE4DRK-proxmox",
-        "url": "http://ve4drk.tunnel.ubersdr.org/",
+        "id": "onl-odk.tunnel.ubersdr.org",
+        "lat": 51.159677233539334,
+        "lon": 2.713701762417029,
+        "comment": "ONL-ODK - Active Loop SDR",
+        "url": "http://onl-odk.tunnel.ubersdr.org/",
         "users": 0,
         "maxusers": 20,
-        "loc": "EN19lu",
-        "country": "Winnipeg, Canada",
-        "device": "UberSDR 0.1.66"
+        "loc": "JO11id",
+        "country": "Nieuwpoort, Belgium",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "sdr.sv9djo.eu:8080",
+        "lat": 34.99285980773633,
+        "lon": 25.54887594415198,
+        "comment": "SV9DJO",
+        "url": "http://sdr.sv9djo.eu:8080/",
+        "users": 0,
+        "maxusers": 100,
+        "loc": "KM24sx",
+        "country": "Municipality of Viannos, Greece",
+        "device": "PhantomSDR+ v.4.2.0",
+        "coverage": [
+            [
+                0,
+                8000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "m9psy-1.instance.ubersdr.org",
+        "lat": 56.02226127260243,
+        "lon": -3.3934295414663924,
+        "comment": "M9PSY-1 - RX888 with 40m Full Wave Loop (GPSDO)",
+        "url": "http://m9psy-1.instance.ubersdr.org/",
+        "users": 0,
+        "maxusers": 20,
+        "loc": "IO86ha",
+        "country": "Rosyth, United Kingdom",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "g4wnc.tunnel.ubersdr.org",
+        "lat": 50.86232688639659,
+        "lon": -1.788314869916838,
+        "comment": "G4WNC - SDR with Active Loop",
+        "url": "http://g4wnc.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 20,
+        "loc": "IO90cu",
+        "country": "New Forest, United Kingdom",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1019,7 +971,113 @@
         "maxusers": 100,
         "loc": "JN67nt",
         "country": "Winkl, Austria",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "g7taj.instance.ubersdr.org",
+        "lat": 51.158952735179675,
+        "lon": -3.0295568017090106,
+        "comment": "G7TAJ - UberSDR (wet string currently)",
+        "url": "http://g7taj.instance.ubersdr.org/",
+        "users": 0,
+        "maxusers": 5,
+        "loc": "IO81ld",
+        "country": "Wembdon, United Kingdom",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "pp5rca.tunnel.ubersdr.org",
+        "lat": -26.94856492713817,
+        "lon": -48.722177843900205,
+        "comment": "PP5RCA - SDR Itajai",
+        "url": "http://pp5rca.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 50,
+        "loc": "GG53pb",
+        "country": "Itaja\u00ed, Brazil",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "f5vbd.tunnel.ubersdr.org",
+        "lat": 45.58565594720379,
+        "lon": 5.964746089875638,
+        "comment": "F5VBD - RX888-MKII with Active E-Field Antenna",
+        "url": "http://f5vbd.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 10,
+        "loc": "JN25xo",
+        "country": "Saint-Jean-d'Arvey, France",
+        "device": "UberSDR 0.1.61",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "orsat.ddns.net:8080",
+        "lat": 43.716745517662325,
+        "lon": -1.0353521782253758,
+        "comment": "PhantomSDR ORSAT",
+        "url": "http://orsat.ddns.net:8080/",
+        "users": 0,
+        "maxusers": 100,
+        "loc": "IN93LR",
+        "country": "Saint-Paul-l\u00e8s-Dax, France",
+        "device": "PhantomSDR+ v.4.2.0",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "ph5hp.tunnel.ubersdr.org",
+        "lat": 53.23892481116961,
+        "lon": 5.857145418478676,
+        "comment": "PH5HP - RX-888 SDR with Wellbrook ALA1530 Loop Antenna 6m height",
+        "url": "http://ph5hp.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 25,
+        "loc": "JO23wf",
+        "country": "Gytsjerk, Netherlands",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1033,6 +1091,392 @@
         "maxusers": 20,
         "loc": "IO92nh",
         "country": "Pitsford, United Kingdom",
-        "device": "UberSDR 0.1.66"
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "m0xdk-1.tunnel.ubersdr.org",
+        "lat": 52.307338483253226,
+        "lon": -0.9578844129091325,
+        "comment": "M0XDK-1 - SDR with Active Loop",
+        "url": "http://m0xdk-1.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 10,
+        "loc": "IO92mh",
+        "country": "West Northamptonshire, United Kingdom",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "kk4fl.tunnel.ubersdr.org",
+        "lat": 37.86932955672542,
+        "lon": -76.3686629282063,
+        "comment": "KK4FL - 300' Open wire",
+        "url": "http://kk4fl.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 20,
+        "loc": "FM17tu",
+        "country": "Northumberland County, United States",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "zp6kfx.tunnel.ubersdr.org",
+        "lat": -25.318793125810636,
+        "lon": -57.357603189135574,
+        "comment": "ZP6KFX - WSPR Aregu\u00e1",
+        "url": "http://zp6kfx.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 10,
+        "loc": "GG14hq",
+        "country": "Aregu\u00e1, Paraguay",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "sdr.22dx.ru:8901",
+        "lat": 53.3102932402533,
+        "lon": 83.62469451438163,
+        "comment": "22dx.ru VertexSDR in Barnaul city, Altai region, Russia",
+        "url": "http://sdr.22dx.ru:8901/",
+        "users": 0,
+        "maxusers": 100,
+        "loc": "NO13TH",
+        "country": "Barnaul, Russia",
+        "device": "22DX-Server 22DX-Server",
+        "coverage": [
+            [
+                26976000,
+                29024000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "n7qxb.tunnel.ubersdr.org",
+        "lat": 40.67352182040131,
+        "lon": -111.81151529716944,
+        "comment": "N7QXB - N7QXB Salt Lake City Utah DN40",
+        "url": "http://n7qxb.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 20,
+        "loc": "DN40cq",
+        "country": "Millcreek, United States",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "gi3jmc.tunnel.ubersdr.org",
+        "lat": 55.06801430533303,
+        "lon": -6.540762417029069,
+        "comment": "GI3JMC - RX-888 with 9:1 random wire",
+        "url": "http://gi3jmc.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 20,
+        "loc": "IO65rb",
+        "country": "Balnamore, United Kingdom",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "radio-crep.tail4af5c4.ts.net",
+        "lat": 20.136648317692835,
+        "lon": -98.72498306248569,
+        "comment": "Radio CREP SDR | 0-2.100 MHz / 6.925-7.485 MHz",
+        "url": "http://radio-crep.tail4af5c4.ts.net/",
+        "users": 0,
+        "maxusers": 50,
+        "loc": "EL00PD",
+        "country": "Camelia (Barrio la Camelia), Mexico",
+        "device": "NovaSDR 0.3.7",
+        "coverage": [
+            [
+                1,
+                2100000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "k1jfj.tunnel.ubersdr.org",
+        "lat": 38.304304989700164,
+        "lon": -79.61269115739681,
+        "comment": "K1JFJ - National Radio Quiet Zone SDR. 95 Xeon cores. 385GB RAM.",
+        "url": "http://k1jfj.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 60,
+        "loc": "FM08eh",
+        "country": "Monterey, United States",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "g4eyr.tunnel.ubersdr.org",
+        "lat": 50.86520412756543,
+        "lon": -0.20598924238956284,
+        "comment": "G4EYR - Wellgood Loop 0-30MHz RX-888",
+        "url": "http://g4eyr.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 20,
+        "loc": "IO90vu",
+        "country": "Portslade by Sea, United Kingdom",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "rocksdr.tunnel.ubersdr.org",
+        "lat": 51.53597608148318,
+        "lon": -0.1319919890135043,
+        "comment": "ROCKSDR - SDR with Active Loop",
+        "url": "http://rocksdr.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 20,
+        "loc": "IO91wm",
+        "country": "Greater London, United Kingdom",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "pu5asf-1.tunnel.ubersdr.org",
+        "lat": -27.638649080643933,
+        "lon": -48.70316510261692,
+        "comment": "PU5ASF-1 - RX888MK2",
+        "url": "http://pu5asf-1.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 20,
+        "loc": "GG52pi",
+        "country": "Palho\u00e7a, Brazil",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "vu24dx.tunnel.ubersdr.org",
+        "lat": 11.30395037003128,
+        "lon": 75.69152185854888,
+        "comment": "VU24DX - SDR with Loop On Ground",
+        "url": "http://vu24dx.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 50,
+        "loc": "MK71uh",
+        "country": "Kozhikode, India",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "novasdr.iw9gdc.it",
+        "lat": 38.13987529564355,
+        "lon": 15.55966468299382,
+        "comment": "IW9GDC - Messina, IT (RX888 MK2)",
+        "url": "http://novasdr.iw9gdc.it/",
+        "users": 0,
+        "maxusers": 100,
+        "loc": "JM78SD",
+        "country": "Messina, Italy",
+        "device": "NovaSDR 0.3.7",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "hfsdr.gr",
+        "lat": 40.01214026855879,
+        "lon": 20.461018616006715,
+        "comment": ".: [RX888] HF WebSDR in Pogoniani, Ioaninna Greece :.",
+        "url": "http://hfsdr.gr/",
+        "users": 0,
+        "maxusers": 100,
+        "loc": "KN00FA",
+        "country": "\u039c\u03b5\u03c1\u03cc\u03c0\u03b7, Greece",
+        "device": "PhantomSDR+ v.4.2.0",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "sdr.meucorp.net",
+        "lat": 48.26899767299916,
+        "lon": -3.540941252765698,
+        "comment": "P0HER - Le WebSDR du Poher (HF)",
+        "url": "http://sdr.meucorp.net/",
+        "users": 0,
+        "maxusers": 32,
+        "loc": "IN88fg",
+        "country": "Carhaix-Plouguer, France",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "reading-ubersdr.m0lte.uk",
+        "lat": 51.49346650644694,
+        "lon": -0.9689349965667201,
+        "comment": "M0LTE - SDR with Active Loop",
+        "url": "http://reading-ubersdr.m0lte.uk/",
+        "users": 0,
+        "maxusers": 20,
+        "loc": "IO91ml",
+        "country": "Reading, United Kingdom",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "va3rom.tunnel.ubersdr.org",
+        "lat": 48.430240672922864,
+        "lon": -89.22081918059052,
+        "comment": "VA3ROM - RX-888 MKII + GPSDO + Vertical",
+        "url": "http://va3rom.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 20,
+        "loc": "EN58jk",
+        "country": "Thunder Bay, Canada",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "f4vtq.tunnel.ubersdr.org",
+        "lat": 48.9812891966125,
+        "lon": 5.719390936140993,
+        "comment": "F4VTQ - SDR with Active Loop",
+        "url": "http://f4vtq.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 2,
+        "loc": "JN28ux",
+        "country": "Vigneulles-l\u00e8s-Hattonch\u00e2tel, France",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                30000000
+            ]
+        ]
+    },
+    {
+        "type": "latlon",
+        "mode": "PhantomSDR",
+        "id": "m9psy.tunnel.ubersdr.org",
+        "lat": 56.02425349050126,
+        "lon": -3.379509040970474,
+        "comment": "M9PSY - RX888 with end-fed long wire (GPSDO)",
+        "url": "http://m9psy.tunnel.ubersdr.org/",
+        "users": 0,
+        "maxusers": 20,
+        "loc": "IO86ha",
+        "country": "Rosyth, United Kingdom",
+        "device": "UberSDR 0.1.66",
+        "coverage": [
+            [
+                10000,
+                60000000
+            ]
+        ]
     }
 ]

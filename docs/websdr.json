@@ -7,8 +7,14 @@
         "lon": 6.875,
         "comment": "WebSDR at the University of Twente, Enschede, NL",
         "url": "http://websdr.ewi.utwente.nl:8901/",
-        "users": 513,
-        "device": "WebSDR"
+        "users": 494,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                29159600
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -18,8 +24,34 @@
         "lon": -48.375,
         "comment": "Pardinho,Brazil-VOICE Cmd: https://appr.org.br",
         "url": "http://appr.org.br:8911/",
-        "users": 74,
-        "device": "WebSDR"
+        "users": 70,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                2048000
+            ],
+            [
+                3494000,
+                4006000
+            ],
+            [
+                6894000,
+                7406000
+            ],
+            [
+                13994000,
+                14506000
+            ],
+            [
+                20994000,
+                21506000
+            ],
+            [
+                26966000,
+                29014000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -29,8 +61,42 @@
         "lon": 6.04583,
         "comment": "WebSDR Maasbree Netherlands (Low): rural low noise level, 160m/80m/60m/40m/30m/20m/17m/15m band, CW segments included",
         "url": "http://sdr.websdrmaasbree.nl:8901/",
-        "users": 98,
-        "device": "WebSDR"
+        "users": 87,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1799000,
+                1991000
+            ],
+            [
+                3468000,
+                3852000
+            ],
+            [
+                5277000,
+                5469000
+            ],
+            [
+                6908000,
+                7292000
+            ],
+            [
+                10054000,
+                10246000
+            ],
+            [
+                13983000,
+                14367000
+            ],
+            [
+                18022000,
+                18214000
+            ],
+            [
+                20841000,
+                21609000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -40,8 +106,14 @@
         "lon": -5.20833,
         "comment": "BATC &#38; AMSAT-UK QO-100 (Es&#39;Hail-2) Geostationary Satellite WebSDR",
         "url": "http://eshail.batc.org.uk:8901/",
-        "users": 121,
-        "device": "WebSDR"
+        "users": 118,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                10489500000,
+                10490000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -51,8 +123,74 @@
         "lon": 61.7917,
         "comment": "SDR receiver in Russia, near Chelyabinsk city",
         "url": "http://sdr.r9a.ru/",
-        "users": 25,
-        "device": "WebSDR"
+        "users": 23,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1804000,
+                1996000
+            ],
+            [
+                1804000,
+                1996000
+            ],
+            [
+                3458000,
+                3842000
+            ],
+            [
+                6908000,
+                7292000
+            ],
+            [
+                10029000,
+                10221000
+            ],
+            [
+                13983000,
+                14367000
+            ],
+            [
+                18022000,
+                18214000
+            ],
+            [
+                20841000,
+                21609000
+            ],
+            [
+                24844000,
+                25036000
+            ],
+            [
+                26838000,
+                27862000
+            ],
+            [
+                27826000,
+                29874000
+            ],
+            [
+                50000000,
+                50768000
+            ],
+            [
+                144000000,
+                144768000
+            ],
+            [
+                143876000,
+                145924000
+            ],
+            [
+                431966000,
+                432734000
+            ],
+            [
+                1295990000,
+                1297010000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -62,8 +200,38 @@
         "lon": -112.292,
         "comment": "Northern Utah WebSDR, Corinne, Utah, U.S.A. - WebSDR #1 (Yellow) - Landing Page",
         "url": "http://websdr1.sdrutah.org:8901/",
-        "users": 76,
-        "device": "WebSDR"
+        "users": 81,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                125000,
+                317000
+            ],
+            [
+                318000,
+                510000
+            ],
+            [
+                1708000,
+                2092000
+            ],
+            [
+                516000,
+                2564000
+            ],
+            [
+                3366000,
+                4134000
+            ],
+            [
+                4816000,
+                5584000
+            ],
+            [
+                6741000,
+                7509000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -73,8 +241,42 @@
         "lon": -0.541667,
         "comment": "- Ham - Bordeaux (France) 80m / 40m / 20m / 15m / 10m / 144 Mhz / 433 Mhz / Es Hail-2 ; QO-100 Satellite geostationnaire 26 Est",
         "url": "http://ham.websdrbordeaux.fr:8000/",
-        "users": 32,
-        "device": "WebSDR"
+        "users": 50,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3408000,
+                3792000
+            ],
+            [
+                6446000,
+                7214000
+            ],
+            [
+                14008000,
+                14392000
+            ],
+            [
+                20866000,
+                21634000
+            ],
+            [
+                27976000,
+                30024000
+            ],
+            [
+                144026000,
+                146074000
+            ],
+            [
+                431996000,
+                434044000
+            ],
+            [
+                10489400000,
+                10490100000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -84,8 +286,42 @@
         "lon": 6.04583,
         "comment": "WebSDR Maasbree Netherlands (High): rural low noise level, 40m/30m/20m/17m/15m/12m/10m band, CW segments included",
         "url": "http://sdr.websdrmaasbree.nl:8902/",
-        "users": 36,
-        "device": "WebSDR"
+        "users": 34,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6908000,
+                7292000
+            ],
+            [
+                10054000,
+                10246000
+            ],
+            [
+                13983000,
+                14367000
+            ],
+            [
+                18022000,
+                18214000
+            ],
+            [
+                20841000,
+                21609000
+            ],
+            [
+                24844000,
+                25036000
+            ],
+            [
+                27966000,
+                28734000
+            ],
+            [
+                28716000,
+                29484000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -95,8 +331,14 @@
         "lon": -74.9583,
         "comment": "0-30 MHz SDR, K3FEF, Milford, PA",
         "url": "http://websdr.k3fef.com:8901/",
-        "users": 39,
-        "device": "WebSDR"
+        "users": 43,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -107,7 +349,13 @@
         "comment": "80m Band. Tambov. Russia. https://80m.radiorubka.org/.",
         "url": "http://80m.radiorubka.org:8903/",
         "users": 41,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3394000,
+                3906000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -117,8 +365,14 @@
         "lon": 9.20833,
         "comment": "IS0GRB QO-100 (Es&#39;Hail-2) Geostationary SAT 26Est (10489 Ham NB Transponder)",
         "url": "http://websdr.is0grb.it:8901/",
-        "users": 77,
-        "device": "WebSDR"
+        "users": 82,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                10489200000,
+                10490200000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -128,8 +382,42 @@
         "lon": 26.2917,
         "comment": "Red Pitaya SDR",
         "url": "http://es4o.ee:8901/",
-        "users": 25,
-        "device": "WebSDR"
+        "users": 22,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1796000,
+                2180000
+            ],
+            [
+                3496000,
+                3880000
+            ],
+            [
+                6996000,
+                7380000
+            ],
+            [
+                10096000,
+                10480000
+            ],
+            [
+                13996000,
+                14380000
+            ],
+            [
+                20996000,
+                21380000
+            ],
+            [
+                27996000,
+                28380000
+            ],
+            [
+                10488700000,
+                10490700000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -139,8 +427,14 @@
         "lon": 41.5417,
         "comment": "U.S.S.R. hobby AM Band \u201cTroyka\u201d. 2900...3200 kHz.",
         "url": "http://3.radiorubka.org/",
-        "users": 25,
-        "device": "WebSDR"
+        "users": 24,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                2355000,
+                3379000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -150,8 +444,42 @@
         "lon": -112.208,
         "comment": "Northern Utah WebSDR, Corinne, Utah, U.S.A. - WebSDR #2 (Green) - Landing Page",
         "url": "http://websdr2.sdrutah.org:8902/",
-        "users": 47,
-        "device": "WebSDR"
+        "users": 49,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                9994000,
+                10186000
+            ],
+            [
+                13766000,
+                14534000
+            ],
+            [
+                18022000,
+                18214000
+            ],
+            [
+                20816000,
+                21584000
+            ],
+            [
+                24844000,
+                25036000
+            ],
+            [
+                27914000,
+                28682000
+            ],
+            [
+                28282000,
+                29818000
+            ],
+            [
+                49916000,
+                50684000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -162,7 +490,25 @@
         "comment": "RECEPTOR DE CARUARU, PE - POR PY7NM",
         "url": "http://py7nmcaruarupe.ddns.net:81/",
         "users": 22,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6688000,
+                7712000
+            ],
+            [
+                9032000,
+                10568000
+            ],
+            [
+                146282000,
+                147818000
+            ],
+            [
+                26887000,
+                28423000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -172,8 +518,42 @@
         "lon": -77.2083,
         "comment": "NA5B WebSDR in Washington DC area USA. VLF-MF-HF: MW-SW-CB Bands, 160-80-40-30-25-20-15-10m ",
         "url": "http://NA5B.com:8901/",
-        "users": 53,
-        "device": "WebSDR"
+        "users": 54,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                2048000
+            ],
+            [
+                3200000,
+                5248000
+            ],
+            [
+                5324000,
+                7372000
+            ],
+            [
+                8825000,
+                10873000
+            ],
+            [
+                11599000,
+                13647000
+            ],
+            [
+                13655000,
+                15703000
+            ],
+            [
+                20888000,
+                21912000
+            ],
+            [
+                26961000,
+                29009000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -183,8 +563,14 @@
         "lon": -13.875,
         "comment": "0-30 MHz SDR, EA8-DF4UE, Fuerteventura, Canary Islands",
         "url": "http://il38.ddns.net:8901/",
-        "users": 35,
-        "device": "WebSDR"
+        "users": 27,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -195,7 +581,41 @@
         "comment": "KFS WebSDR on the Pacific coast south of San Francisco",
         "url": "http://websdr1.kfsdr.com:8901/",
         "users": 33,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3316000,
+                4084000
+            ],
+            [
+                4916000,
+                5684000
+            ],
+            [
+                6741000,
+                7509000
+            ],
+            [
+                9984000,
+                10176000
+            ],
+            [
+                13766000,
+                14534000
+            ],
+            [
+                18022000,
+                18214000
+            ],
+            [
+                20816000,
+                21584000
+            ],
+            [
+                27914000,
+                28682000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -205,8 +625,14 @@
         "lon": -61.375,
         "comment": "LU8FCJ Raspberry PI SDR receiver - Villa Ca\u00f1\u00e1s zona rural",
         "url": "http://el22.dyndns-blog.com:8081/",
-        "users": 11,
-        "device": "WebSDR"
+        "users": 12,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6638000,
+                7662000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -216,8 +642,42 @@
         "lon": 45.2917,
         "comment": "GEORGIA Country, Odlisi-Kakheti",
         "url": "http://sdrgeorgia.sytes.net:8902/",
-        "users": 7,
-        "device": "WebSDR"
+        "users": 9,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1388000,
+                2412000
+            ],
+            [
+                3138000,
+                4162000
+            ],
+            [
+                6588000,
+                7612000
+            ],
+            [
+                13663000,
+                14687000
+            ],
+            [
+                17606000,
+                18630000
+            ],
+            [
+                20738000,
+                21762000
+            ],
+            [
+                24428000,
+                25452000
+            ],
+            [
+                26976000,
+                29024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -227,8 +687,26 @@
         "lon": 20.9583,
         "comment": "Websdr receiver with RSP1A by SV6KPT in IOANNINA GREECE (with band operation)",
         "url": "http://radio-sdr.dyndns.org:8901/",
-        "users": 32,
-        "device": "WebSDR"
+        "users": 27,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6972000,
+                7228000
+            ],
+            [
+                3542000,
+                3798000
+            ],
+            [
+                1782000,
+                2038000
+            ],
+            [
+                1289000,
+                1801000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -238,8 +716,42 @@
         "lon": 8.70833,
         "comment": "WebSDR for QO-100, 160/80m, 60/40m, 20m, 6m and local VHF/UHF/SHF bands 2m/70cm/23cm by DK1ML Frankfurt/Main reworked Oct. 2025",
         "url": "http://sdr.homeip.net:8901/",
-        "users": 20,
-        "device": "WebSDR"
+        "users": 19,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143961000,
+                146009000
+            ],
+            [
+                437976000,
+                440024000
+            ],
+            [
+                1240980000,
+                1243020000
+            ],
+            [
+                10489500000,
+                10490000000
+            ],
+            [
+                1800000,
+                3848000
+            ],
+            [
+                5190000,
+                7238000
+            ],
+            [
+                13994000,
+                14506000
+            ],
+            [
+                50094000,
+                50286000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -249,8 +761,42 @@
         "lon": -112.458,
         "comment": "Northern Utah WebSDR, Corinne, Utah, U.S.A. - WebSDR #4 (Magenta) - Landing Page",
         "url": "http://websdr4.sdrutah.org:8904/",
-        "users": 34,
-        "device": "WebSDR"
+        "users": 35,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6741000,
+                7509000
+            ],
+            [
+                9994000,
+                10186000
+            ],
+            [
+                13766000,
+                14534000
+            ],
+            [
+                18022000,
+                18214000
+            ],
+            [
+                20816000,
+                21584000
+            ],
+            [
+                24844000,
+                25036000
+            ],
+            [
+                27914000,
+                28682000
+            ],
+            [
+                28282000,
+                29818000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -260,8 +806,22 @@
         "lon": 1.54167,
         "comment": "WebSDR in C3 Ordino - ANDORRA PRINCIPALITY - ARDAM Ham Radio Association  -   RX 4 pcs FuncubeDonggle Pro+ ",
         "url": "http://sdr.radioandorra.org/",
-        "users": 1,
-        "device": "WebSDR"
+        "users": 2,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                7008000,
+                7200000
+            ],
+            [
+                3610000,
+                3802000
+            ],
+            [
+                14051000,
+                14243000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -271,8 +831,26 @@
         "lon": 41.5792,
         "comment": "UA6EH WebSDR Server",
         "url": "http://85.173.189.23:8901/",
-        "users": 29,
-        "device": "WebSDR"
+        "users": 32,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                2616000,
+                4664000
+            ],
+            [
+                6588000,
+                7612000
+            ],
+            [
+                9988000,
+                11012000
+            ],
+            [
+                13608000,
+                14632000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -282,8 +860,38 @@
         "lon": 104.542,
         "comment": "QS1R SDR in RUSSIA, Irkutsk, Loc-OO22GE : Multiband",
         "url": "http://ra0sms-websdr.ru:8902/",
-        "users": 17,
-        "device": "WebSDR"
+        "users": 19,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1795000,
+                1987000
+            ],
+            [
+                3495000,
+                3687000
+            ],
+            [
+                6995000,
+                7187000
+            ],
+            [
+                10095000,
+                10287000
+            ],
+            [
+                13995000,
+                14187000
+            ],
+            [
+                18063000,
+                18255000
+            ],
+            [
+                20995000,
+                21187000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -293,8 +901,42 @@
         "lon": 22.4583,
         "comment": "&#34;THIS IS SPARTA SDR  MW-HF-VHF by SV3GCB with RTL &#38; RSP1 Receivers and DEDICATED ANT for EACH Receiver www.spartasdr.gr",
         "url": "http://sv3gcb.ddns.net:8905/",
-        "users": 23,
-        "device": "WebSDR"
+        "users": 20,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                783000,
+                1807000
+            ],
+            [
+                49978000,
+                51002000
+            ],
+            [
+                27551000,
+                29599000
+            ],
+            [
+                13934000,
+                14446000
+            ],
+            [
+                6982000,
+                7238000
+            ],
+            [
+                5272000,
+                6808000
+            ],
+            [
+                3419000,
+                3931000
+            ],
+            [
+                1544000,
+                2056000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -304,8 +946,34 @@
         "lon": -2.54167,
         "comment": "Muti-band webSDR located at the former RAF Hack Green in Cheshire",
         "url": "http://hackgreensdr.org:8901/",
-        "users": 10,
-        "device": "WebSDR"
+        "users": 12,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1708000,
+                2092000
+            ],
+            [
+                3266000,
+                4034000
+            ],
+            [
+                5158000,
+                5542000
+            ],
+            [
+                6858000,
+                7242000
+            ],
+            [
+                13816000,
+                14584000
+            ],
+            [
+                17908000,
+                18292000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -316,7 +984,29 @@
         "comment": "ROMA CAPUT MUNDI ! OFFICIAL ITALY WEBSDR , LOCATION &#34;Fara Sabina city&#34; ",
         "url": "http://roma4.ddns.net/",
         "users": 8,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                5876000,
+                7924000
+            ],
+            [
+                12976000,
+                15024000
+            ],
+            [
+                26509000,
+                28557000
+            ],
+            [
+                129726000,
+                131774000
+            ],
+            [
+                99376000,
+                101424000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -326,8 +1016,14 @@
         "lon": 23.5417,
         "comment": "Websdr by SV3YY in SALAMINA GREECE with RSP1a receiver.",
         "url": "http://salamisdr22.ddns.net:8906/",
-        "users": 21,
-        "device": "WebSDR"
+        "users": 17,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                682000,
+                2218000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -338,7 +1034,13 @@
         "comment": "SV1BTL PhantomSDR+ Athens GR",
         "url": "http://phantomsdr.no-ip.org:8900/",
         "users": 13,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -348,8 +1050,38 @@
         "lon": 21.5417,
         "comment": "some RTL dongles with converter ",
         "url": "http://websdr.printf.cc:8901/",
-        "users": 20,
-        "device": "WebSDR"
+        "users": 21,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                2000000,
+                4048000
+            ],
+            [
+                3997520,
+                6045520
+            ],
+            [
+                6000000,
+                8048000
+            ],
+            [
+                8002000,
+                10050000
+            ],
+            [
+                10050000,
+                12098000
+            ],
+            [
+                11996900,
+                14044900
+            ],
+            [
+                14000000,
+                16048000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -359,8 +1091,14 @@
         "lon": 5.20833,
         "comment": "0-30 MHz SDR, HEPPEN, Heppen, Limburg, Belgium",
         "url": "http://websdr.heppen.be:8901/",
-        "users": 3,
-        "device": "WebSDR"
+        "users": 7,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -370,8 +1108,38 @@
         "lon": 25.625,
         "comment": "WebSDR Server in Breaza (PH), Romania",
         "url": "http://websdr.yo3ggx.ro:8765/",
-        "users": 5,
-        "device": "WebSDR"
+        "users": 4,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3494000,
+                4006000
+            ],
+            [
+                6972000,
+                7228000
+            ],
+            [
+                13994000,
+                14506000
+            ],
+            [
+                20994000,
+                21506000
+            ],
+            [
+                26966000,
+                29014000
+            ],
+            [
+                143976000,
+                146024000
+            ],
+            [
+                431976000,
+                434024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -381,8 +1149,42 @@
         "lon": 21.875,
         "comment": "HTTPS://WEBSDR.FI - OH1E, Riku WebSDR Server Ulvila/Pori, Popular. SUOMALAINEN SDR! Paljon liikenetta! 27Mhz CB, RHA68, 2M ja 8",
         "url": "http://websdr.fi:8080/",
-        "users": -17,
-        "device": "WebSDR"
+        "users": -19,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1805000,
+                3853000
+            ],
+            [
+                7000000,
+                7256000
+            ],
+            [
+                14000000,
+                15024000
+            ],
+            [
+                26925000,
+                28973000
+            ],
+            [
+                67460000,
+                70340000
+            ],
+            [
+                70476000,
+                72524000
+            ],
+            [
+                143976000,
+                146024000
+            ],
+            [
+                432976000,
+                435024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -393,7 +1195,21 @@
         "comment": "Barney&#39;s Websdr #1 LF/MF/80m &#38; 40m Bedford England",
         "url": "http://remoteradio.changeip.org:8073/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                2048000
+            ],
+            [
+                3500000,
+                5548000
+            ],
+            [
+                5376000,
+                7424000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -403,8 +1219,34 @@
         "lon": 83.625,
         "comment": "22dx.ru VertexSDR in Barnaul city, Altai region, Russia",
         "url": "http://sdr.22dx.ru:8901/",
-        "users": 6,
-        "device": "WebSDR"
+        "users": 8,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ],
+            [
+                432976000,
+                435024000
+            ],
+            [
+                26976000,
+                29024000
+            ],
+            [
+                13983000,
+                14367000
+            ],
+            [
+                6990000,
+                7374000
+            ],
+            [
+                3094000,
+                4630000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -414,8 +1256,30 @@
         "lon": 30.2083,
         "comment": "WebSDR receiver in Saint-Petersburg, Russia.",
         "url": "http://websdr.78dx.ru:8901/",
-        "users": 7,
-        "device": "WebSDR"
+        "users": 9,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ],
+            [
+                2976000,
+                5024000
+            ],
+            [
+                6588000,
+                7612000
+            ],
+            [
+                12476000,
+                14524000
+            ],
+            [
+                26776000,
+                28824000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -425,8 +1289,18 @@
         "lon": -47.875,
         "comment": "Orlandia - SP - Brazil",
         "url": "http://orlandia.sdr.net.br:9001/",
-        "users": 6,
-        "device": "WebSDR"
+        "users": 7,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6894000,
+                7406000
+            ],
+            [
+                3494000,
+                4006000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -436,8 +1310,54 @@
         "lon": 6.375,
         "comment": "25 meter radio telescope near Dwingeloo, The Netherlands",
         "url": "http://websdr.camras.nl:8901/",
-        "users": 12,
-        "device": "WebSDR"
+        "users": 11,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                435450000,
+                437850000
+            ],
+            [
+                432024000,
+                434072000
+            ],
+            [
+                430000000,
+                431024000
+            ],
+            [
+                143976000,
+                146024000
+            ],
+            [
+                143022000,
+                143118000
+            ],
+            [
+                123337000,
+                123433000
+            ],
+            [
+                69988000,
+                71012000
+            ],
+            [
+                49956000,
+                52004000
+            ],
+            [
+                49688000,
+                50712000
+            ],
+            [
+                39976000,
+                42024000
+            ],
+            [
+                19476000,
+                21524000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -447,8 +1367,38 @@
         "lon": 10.0417,
         "comment": "Kopernikus SDR Nordhessen, Werra-Meissner-Kreis, Germany (13HN620) ",
         "url": "http://wmk.nordhessenfunk.de/",
-        "users": 4,
-        "device": "WebSDR"
+        "users": 5,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                437976000,
+                440024000
+            ],
+            [
+                143876000,
+                145924000
+            ],
+            [
+                27936100,
+                29983900
+            ],
+            [
+                26332000,
+                27868000
+            ],
+            [
+                13919000,
+                14431000
+            ],
+            [
+                6972000,
+                7228000
+            ],
+            [
+                3444000,
+                3956000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -458,8 +1408,18 @@
         "lon": -60.2917,
         "comment": "Tres Arroyos receptor sdr",
         "url": "http://lu3dj.ddns.net:8080/",
-        "users": 13,
-        "device": "WebSDR"
+        "users": 11,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                13688000,
+                14712000
+            ],
+            [
+                6638000,
+                7662000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -470,7 +1430,13 @@
         "comment": "LU8FCJ Raspberry PI SDR receiver - Villa Ca\u00f1\u00e1s zona rural",
         "url": "http://el22.dyndns-blog.com:8080/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                13688000,
+                14712000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -480,8 +1446,42 @@
         "lon": 21.7917,
         "comment": "RTL-SDR V3 receivers with BoG antenna in a quiet QTH in southeastern Poland (in the countryside). ",
         "url": "http://websdr.so8oo.net:8091/",
-        "users": 14,
-        "device": "WebSDR"
+        "users": 18,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                96000
+            ],
+            [
+                1516000,
+                2284000
+            ],
+            [
+                3326000,
+                4094000
+            ],
+            [
+                4488000,
+                5512000
+            ],
+            [
+                6887000,
+                7911000
+            ],
+            [
+                13326000,
+                14350000
+            ],
+            [
+                27488000,
+                28512000
+            ],
+            [
+                10489200000,
+                10490300000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -492,7 +1492,41 @@
         "comment": "SV4BFB&#39;s WebSDR in Trigona, Mouzaki Karditsas Central HELLAS",
         "url": "http://sv4bfb.ddns.net/",
         "users": 4,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                464000,
+                2000000
+            ],
+            [
+                3084000,
+                4108000
+            ],
+            [
+                4788000,
+                5812000
+            ],
+            [
+                6438000,
+                7462000
+            ],
+            [
+                13663000,
+                14687000
+            ],
+            [
+                20713000,
+                21737000
+            ],
+            [
+                26532000,
+                28068000
+            ],
+            [
+                28082000,
+                29618000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -503,7 +1537,17 @@
         "comment": "2m band WebSDR Maasbree Netherlands",
         "url": "http://sdr.websdrmaasbree.nl:8905/",
         "users": 8,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143732000,
+                145268000
+            ],
+            [
+                144732000,
+                146268000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -513,8 +1557,26 @@
         "lon": -3.875,
         "comment": "WEB-SDR en Madrid - Spain REM-ESP",
         "url": "http://rem-esp.spdns.org:8901/",
-        "users": 14,
-        "device": "WebSDR"
+        "users": 10,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ],
+            [
+                13026000,
+                15074000
+            ],
+            [
+                5976000,
+                8024000
+            ],
+            [
+                2751000,
+                4799000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -524,8 +1586,34 @@
         "lon": 22.9583,
         "comment": "Websdr Receiver Operated by SV2HNH",
         "url": "http://sv2hnh.no-ip.org:8901/",
-        "users": 5,
-        "device": "WebSDR"
+        "users": 4,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                437786000,
+                439834000
+            ],
+            [
+                430186000,
+                432234000
+            ],
+            [
+                144464000,
+                146000000
+            ],
+            [
+                26976000,
+                29024000
+            ],
+            [
+                6188000,
+                7212000
+            ],
+            [
+                460000,
+                1996000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -536,7 +1624,21 @@
         "comment": "Websdr receiver by SV3YY in Rion GREECE",
         "url": "http://sv3yy1.no-ip.org:8901/",
         "users": 4,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                7014000,
+                7206000
+            ],
+            [
+                3619000,
+                3811000
+            ],
+            [
+                1038000,
+                2062000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -547,7 +1649,21 @@
         "comment": "WebSDR Porto Lucena - RS - Brazil",
         "url": "http://pu3alk.com.br:9001/",
         "users": 6,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3238000,
+                4262000
+            ],
+            [
+                6026000,
+                8074000
+            ],
+            [
+                26876000,
+                28924000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -558,7 +1674,25 @@
         "comment": "AMSAT-UK VHF Goonhilly WebSDR",
         "url": "http://vhf-goonhilly.batc.org.uk:8902/",
         "users": 2,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ],
+            [
+                435000000,
+                437880000
+            ],
+            [
+                1295980000,
+                1298020000
+            ],
+            [
+                2319990000,
+                2321010000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -569,7 +1703,17 @@
         "comment": "- Freebands - Bordeaux (France) 11m / 446 Mhz / Etc ..",
         "url": "http://freebands.websdrbordeaux.fr:9000/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                26958000,
+                27982000
+            ],
+            [
+                27320000,
+                27576000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -580,7 +1724,41 @@
         "comment": "WebSDR of DK0TE - Friedrichshafen - Germany - Lake Constance",
         "url": "http://dk0te.inf.dhbw-ravensburg.de:8901/",
         "users": 4,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1795000,
+                1987000
+            ],
+            [
+                3495000,
+                3687000
+            ],
+            [
+                3623000,
+                3815000
+            ],
+            [
+                6995000,
+                7187000
+            ],
+            [
+                10095000,
+                10287000
+            ],
+            [
+                13995000,
+                14187000
+            ],
+            [
+                20995000,
+                21187000
+            ],
+            [
+                27995000,
+                28187000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -591,7 +1769,29 @@
         "comment": "70cm band WebSDR Maasbree Netherlands (high) with satellite tracker",
         "url": "http://sdr.websdrmaasbree.nl:8909/",
         "users": 2,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                434732000,
+                436268000
+            ],
+            [
+                435732000,
+                437268000
+            ],
+            [
+                436732000,
+                438268000
+            ],
+            [
+                437732000,
+                439268000
+            ],
+            [
+                438732000,
+                440268000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -601,8 +1801,42 @@
         "lon": -112.375,
         "comment": "Northern Utah WebSDR, Corinne, Utah, U.S.A. - WebSDR #3 (Blue) - Landing Page",
         "url": "http://websdr3.sdrutah.org:8903/",
-        "users": 5,
-        "device": "WebSDR"
+        "users": 4,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3182500,
+                4718500
+            ],
+            [
+                6734500,
+                8270500
+            ],
+            [
+                4701000,
+                6749000
+            ],
+            [
+                8674500,
+                10210500
+            ],
+            [
+                11390500,
+                12414500
+            ],
+            [
+                14434500,
+                15970500
+            ],
+            [
+                143981000,
+                146029000
+            ],
+            [
+                145981000,
+                148029000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -612,8 +1846,34 @@
         "lon": -2.29167,
         "comment": "G0XBU WebSDR Jodrell SERVER 2, UK",
         "url": "http://g0xbuwebsdr.ddns.net:8902/",
-        "users": 6,
-        "device": "WebSDR"
+        "users": 5,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ],
+            [
+                429988000,
+                431012000
+            ],
+            [
+                431976000,
+                434024000
+            ],
+            [
+                445638000,
+                446662000
+            ],
+            [
+                118126000,
+                120174000
+            ],
+            [
+                119976000,
+                122024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -624,7 +1884,13 @@
         "comment": "Located in Conwy on the North Wales Coast",
         "url": "http://217.155.0.218/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3595430,
+                3787430
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -634,8 +1900,34 @@
         "lon": -2.29167,
         "comment": "G0XBU WebSDR Jodrell SERVER 1, UK",
         "url": "http://g0xbuwebsdr.ddns.net:8901/",
-        "users": 4,
-        "device": "WebSDR"
+        "users": 3,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                13919000,
+                14431000
+            ],
+            [
+                26776000,
+                28824000
+            ],
+            [
+                3376000,
+                5424000
+            ],
+            [
+                69976000,
+                72024000
+            ],
+            [
+                49976000,
+                52024000
+            ],
+            [
+                6488000,
+                7512000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -645,8 +1937,14 @@
         "lon": 8.625,
         "comment": "0-30 MHz SDR, HB9RYZ-1, JN47GA - Rigi Scheidegg",
         "url": "http://185.199.176.46:8901/",
-        "users": 14,
-        "device": "WebSDR"
+        "users": 13,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -657,7 +1955,13 @@
         "comment": "CX1AAO Websdr Playa Hermosa,Maldonado, Uruguay",
         "url": "http://phermosa.dyndns.org:8901/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6888000,
+                7912000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -668,7 +1972,41 @@
         "comment": "DF0HTE at Esslingen University of Applied Sciences, Germany",
         "url": "http://websdr.afunk.hs-esslingen.de/",
         "users": 2,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1416000,
+                2184000
+            ],
+            [
+                3468000,
+                3852000
+            ],
+            [
+                6908000,
+                7292000
+            ],
+            [
+                10004000,
+                10196000
+            ],
+            [
+                13791000,
+                14559000
+            ],
+            [
+                18004000,
+                18196000
+            ],
+            [
+                26431000,
+                27199000
+            ],
+            [
+                28936000,
+                29704000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -679,7 +2017,37 @@
         "comment": "Northern Utah WebSDR, Corinne, Utah, U.S.A. - WebSDR #5 (Teal) - Landing Page",
         "url": "http://websdr5.sdrutah.org:8905/",
         "users": 4,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                9994000,
+                10186000
+            ],
+            [
+                13766000,
+                14534000
+            ],
+            [
+                18022000,
+                18214000
+            ],
+            [
+                20816000,
+                21584000
+            ],
+            [
+                24844000,
+                25036000
+            ],
+            [
+                27914000,
+                28682000
+            ],
+            [
+                28282000,
+                29818000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -689,8 +2057,14 @@
         "lon": 23.7917,
         "comment": "0-30 MHz SDR, SV1BTL, Athens, GR",
         "url": "http://sv1btlham.no-ip.org:8901/",
-        "users": 3,
-        "device": "WebSDR"
+        "users": 2,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -701,7 +2075,25 @@
         "comment": "RTLSDR Dell Optiplex 960 EM12ho W2DB",
         "url": "http://2360.ddns.me:8901/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                926988000,
+                928012000
+            ],
+            [
+                19961000,
+                22009000
+            ],
+            [
+                5976000,
+                8024000
+            ],
+            [
+                13276000,
+                15324000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -712,7 +2104,17 @@
         "comment": "WebSDR RX network by rw6mit, QTH R6MX | Rostov-on-Don",
         "url": "http://rnd.websdr.pro/",
         "users": 4,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ],
+            [
+                431976000,
+                434024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -722,8 +2124,22 @@
         "lon": 16.5417,
         "comment": "WebSDR located near Krizevci, Croatia",
         "url": "http://9a1cra.ddns.net:8902/",
-        "users": 4,
-        "device": "WebSDR"
+        "users": 2,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                2048000
+            ],
+            [
+                3476000,
+                5524000
+            ],
+            [
+                5526000,
+                7574000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -734,7 +2150,17 @@
         "comment": " Sebago Lake WebSDR Maine USA",
         "url": "http://sebagolakesdr.us:8901/",
         "users": 2,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3276000,
+                5324000
+            ],
+            [
+                27976000,
+                30024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -744,8 +2170,38 @@
         "lon": 5.29167,
         "comment": "S.H.B.R.G. &#39;s-Hertogenbosch, The Netherlands.",
         "url": "http://sdr.shbrg.nl:9002/",
-        "users": 18,
-        "device": "WebSDR"
+        "users": 19,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ],
+            [
+                429650000,
+                439650000
+            ],
+            [
+                1295000000,
+                1301000000
+            ],
+            [
+                444976000,
+                447024000
+            ],
+            [
+                118000000,
+                128000000
+            ],
+            [
+                127000000,
+                137000000
+            ],
+            [
+                79000000,
+                89000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -756,7 +2212,17 @@
         "comment": "Receptor SDR de Paraibuna, SP - Brazil",
         "url": "http://paraibuna.websdr.com.br:8901/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3474000,
+                3986000
+            ],
+            [
+                6884000,
+                7396000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -766,8 +2232,38 @@
         "lon": -2.625,
         "comment": "Wessex WebSDR - South West UK covering 8m, 6m, 4m, 2m, 70cm &#38; 3cm",
         "url": "http://wessex.hopto.org:8902/",
-        "users": 4,
-        "device": "WebSDR"
+        "users": 3,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                39476000,
+                41524000
+            ],
+            [
+                49961000,
+                52009000
+            ],
+            [
+                69976000,
+                72024000
+            ],
+            [
+                143976000,
+                146024000
+            ],
+            [
+                431976000,
+                434024000
+            ],
+            [
+                433976000,
+                436024000
+            ],
+            [
+                10368000000,
+                10370000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -777,8 +2273,38 @@
         "lon": 43.0417,
         "comment": "RD7T Clubstation WebSDR in Pyatigorsk http://rd7t.qrz.ru/sdr",
         "url": "http://websdr.imorozov.info:8901/",
-        "users": 3,
-        "device": "WebSDR"
+        "users": 2,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                526000,
+                2574000
+            ],
+            [
+                2838000,
+                3862000
+            ],
+            [
+                6588000,
+                7612000
+            ],
+            [
+                13608000,
+                14632000
+            ],
+            [
+                143991000,
+                146039000
+            ],
+            [
+                432991000,
+                435039000
+            ],
+            [
+                429991000,
+                432039000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -789,7 +2315,13 @@
         "comment": "0-30 MHz SDR, K1RA, Warrenton, VA, USA",
         "url": "http://websdr.k1ra.us:8901/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -800,7 +2332,29 @@
         "comment": "10m, 4m, 2m and 70cm SDR from Nantwich in Cheshire.",
         "url": "http://hackgreensdr.org:8902/",
         "users": 3,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                432476000,
+                434524000
+            ],
+            [
+                143976000,
+                146024000
+            ],
+            [
+                69738000,
+                70762000
+            ],
+            [
+                28232000,
+                29768000
+            ],
+            [
+                49976000,
+                52024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -811,7 +2365,37 @@
         "comment": "Vesuvio WebSDR Station, QTH Napoli - Italy",
         "url": "http://websdr.ns0.it:8902/",
         "users": 5,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                2676000,
+                4724000
+            ],
+            [
+                5956000,
+                8004000
+            ],
+            [
+                13076000,
+                15124000
+            ],
+            [
+                26951000,
+                28999000
+            ],
+            [
+                49976000,
+                52024000
+            ],
+            [
+                143976000,
+                146024000
+            ],
+            [
+                431966000,
+                434014000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -822,7 +2406,13 @@
         "comment": "9A7AOF PhantomSDR+ with RX888MK2 and Active Loop, Croatia",
         "url": "http://9a7aof.ddns.net:8905/",
         "users": 4,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -833,7 +2423,17 @@
         "comment": "LU2DSA WebSDR ",
         "url": "http://garypaucha.ddns.net:8901/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6588000,
+                7612000
+            ],
+            [
+                3228000,
+                4252000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -843,8 +2443,26 @@
         "lon": -0.375,
         "comment": "VHF and UHF WebSDR Located in south Hertfordshire UK using RTL Dongles ",
         "url": "http://sdr.codedv.com:8091/",
-        "users": 4,
-        "device": "WebSDR"
+        "users": 3,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ],
+            [
+                432966000,
+                435014000
+            ],
+            [
+                69738000,
+                70762000
+            ],
+            [
+                49966000,
+                52014000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -854,8 +2472,30 @@
         "lon": -97.7083,
         "comment": "KF5JMD WebSDR (Gatesville, Texas)",
         "url": "http://sdr.kf5jmd.com:8901/",
-        "users": 5,
-        "device": "WebSDR"
+        "users": 6,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                461890,
+                1997890
+            ],
+            [
+                3125910,
+                5173910
+            ],
+            [
+                5750000,
+                7798000
+            ],
+            [
+                8132810,
+                10180800
+            ],
+            [
+                26711000,
+                28759000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -865,8 +2505,26 @@
         "lon": 22.4745,
         "comment": "SV1CMG&#39;s WebSDR in LAMIA, Central HELLAS.",
         "url": "http://sv1cmg.no-ip.org/",
-        "users": 2,
-        "device": "WebSDR"
+        "users": 1,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                464000,
+                2000000
+            ],
+            [
+                3084000,
+                4108000
+            ],
+            [
+                6438000,
+                7462000
+            ],
+            [
+                13663000,
+                14687000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -876,8 +2534,18 @@
         "lon": -68.8359,
         "comment": "&#34; MENDOZA, ARGENTINA / LU1MA CUYO RADIO CLUB",
         "url": "http://club.lu1ma.org.ar:7999/",
-        "users": -2,
-        "device": "WebSDR"
+        "users": -1,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6643000,
+                7667000
+            ],
+            [
+                3238000,
+                4262000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -888,7 +2556,13 @@
         "comment": "Remote DX-Station at 1&#39;660m Rigi Scheidegg operated by HB9RYZ",
         "url": "http://185.199.176.46:8092/",
         "users": 7,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                144116000,
+                144884000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -899,7 +2573,33 @@
         "comment": "SBSA SiljansbygdensSandareamatorer, SK4KO, Mora, Sweden",
         "url": "http://websdr.sk4ko.com:8901/",
         "users": -3,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1388000,
+                2412000
+            ],
+            [
+                3138000,
+                4162000
+            ],
+            [
+                6588000,
+                7612000
+            ],
+            [
+                13688000,
+                14712000
+            ],
+            [
+                20713000,
+                21737000
+            ],
+            [
+                27976000,
+                30024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -909,8 +2609,26 @@
         "lon": -118.542,
         "comment": "WEB SDR in Santa Clarita, CA 45 Miles North of Los Angeles ",
         "url": "http://kj6eo.com:8901/",
-        "users": 0,
-        "device": "WebSDR"
+        "users": 1,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                -24310,
+                2023690
+            ],
+            [
+                3037540,
+                4061540
+            ],
+            [
+                6637440,
+                7661440
+            ],
+            [
+                26672600,
+                27696600
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -920,8 +2638,14 @@
         "lon": -77.2083,
         "comment": "0-30 MHz SDR, NA5B, Washington DC Area, USA",
         "url": "http://na5b.com:8905/",
-        "users": 2,
-        "device": "WebSDR"
+        "users": 1,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -931,8 +2655,42 @@
         "lon": 23.375,
         "comment": "WebSDR by LZ7AA based on Redpitaya on the 6 major bands",
         "url": "http://websdr.info:8901/",
-        "users": 5,
-        "device": "WebSDR"
+        "users": 4,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3494000,
+                3686000
+            ],
+            [
+                3674000,
+                3866000
+            ],
+            [
+                6994000,
+                7186000
+            ],
+            [
+                13994000,
+                14186000
+            ],
+            [
+                14174000,
+                14366000
+            ],
+            [
+                20994000,
+                21186000
+            ],
+            [
+                21204000,
+                21396000
+            ],
+            [
+                27994000,
+                28186000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -942,8 +2700,14 @@
         "lon": 75.7083,
         "comment": "0-30 MHz SDR, VU24DX, Kozhikode ,Kerala,India",
         "url": "http://vu24dx.ddns.net:8901/",
-        "users": 1,
-        "device": "WebSDR"
+        "users": 0,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -953,8 +2717,26 @@
         "lon": 39.5417,
         "comment": "Russia, the Lipetsk city, WebSDR 2m, 40m, 80m (144-146 Mhz, 7 Mhz, 3 Mhz)",
         "url": "http://stream.sdr48.ru:8901/",
-        "users": 1,
-        "device": "WebSDR"
+        "users": 2,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ],
+            [
+                3408000,
+                3792000
+            ],
+            [
+                6908000,
+                7292000
+            ],
+            [
+                10488700000,
+                10490700000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -965,7 +2747,17 @@
         "comment": "Alfredo Marcondes - SP - Brazil",
         "url": "http://alfredomarcondes.sdr.net.br:37001/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3494000,
+                4006000
+            ],
+            [
+                6958000,
+                7342000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -975,8 +2767,14 @@
         "lon": -3.375,
         "comment": "0-60 MHz SDR, M9PSY, Dalgety Bay, Scotland, UK",
         "url": "http://44.31.241.13:8901/",
-        "users": 1,
-        "device": "WebSDR"
+        "users": 0,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                60000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -987,7 +2785,13 @@
         "comment": "0-30 MHz SDR, M9PSY-1, Dalgety Bay, Scotland, UK",
         "url": "http://44.31.241.12:8901/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -998,7 +2802,13 @@
         "comment": "ROMA2 WEBSDR RADIO Italy Rome CB HF VHF UHF ",
         "url": "http://roma2sdr.ddns.net/",
         "users": 2,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                26831000,
+                28879000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1008,8 +2818,14 @@
         "lon": 77.625,
         "comment": "0-30 MHz SDR, VU2CPL, Bangalore, India",
         "url": "http://vu2cpl.ddns.net:8901/",
-        "users": 0,
-        "device": "WebSDR"
+        "users": 1,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1020,7 +2836,41 @@
         "comment": "Experimental WEB-SDR Server by SV2YJ in Alexandria GREECE. Pocket RxTx supported.",
         "url": "http://hamradio.sv2yj.live:8901/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143966000,
+                146014000
+            ],
+            [
+                49966000,
+                52014000
+            ],
+            [
+                26896000,
+                28944000
+            ],
+            [
+                13688000,
+                14712000
+            ],
+            [
+                4928000,
+                5952000
+            ],
+            [
+                6598000,
+                7622000
+            ],
+            [
+                3173000,
+                4197000
+            ],
+            [
+                991000,
+                2015000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1030,8 +2880,14 @@
         "lon": 65.4583,
         "comment": "WebSDR, Russia, Tyumen (West Siberia Plain).",
         "url": "http://websdr.electrosystem.ru:8081/",
-        "users": 2,
-        "device": "WebSDR"
+        "users": 3,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1042,7 +2898,29 @@
         "comment": "NA5B WebSDR in Washington DC area USA. VHF-UHF; 6m, Air Band, 2m and 70cm ",
         "url": "http://NA5B.com:8902/",
         "users": 4,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                50000000,
+                52048000
+            ],
+            [
+                118976000,
+                121024000
+            ],
+            [
+                145426000,
+                147474000
+            ],
+            [
+                160876000,
+                162924000
+            ],
+            [
+                0,
+                24000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1052,8 +2930,22 @@
         "lon": 23.6415,
         "comment": "Websdr by SV1TKU  in Nikaia-Athens GREECE with RTL-RSP1 receiver.",
         "url": "http://varadero1000.ddns.net:8901/",
-        "users": 5,
-        "device": "WebSDR"
+        "users": 6,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                718000,
+                1742000
+            ],
+            [
+                3572000,
+                3828000
+            ],
+            [
+                6962000,
+                7218000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1064,7 +2956,41 @@
         "comment": "WEBSDR CB0MTL Germany Parthenstein JO61HF",
         "url": "http://cb0mtl.selfhost.eu:8080/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1776000,
+                3824000
+            ],
+            [
+                5976000,
+                8024000
+            ],
+            [
+                26476000,
+                28524000
+            ],
+            [
+                27976000,
+                30024000
+            ],
+            [
+                49976000,
+                52024000
+            ],
+            [
+                143976000,
+                146024000
+            ],
+            [
+                437976000,
+                440024000
+            ],
+            [
+                739236000,
+                740260000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1074,8 +3000,26 @@
         "lon": 9.70833,
         "comment": "WebSDR Wasserkuppe 956m ",
         "url": "http://sdr.osthessenfunk.de/",
-        "users": 1,
-        "device": "WebSDR"
+        "users": 2,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                25981000,
+                28029000
+            ],
+            [
+                27916000,
+                29964000
+            ],
+            [
+                143976000,
+                146024000
+            ],
+            [
+                148061000,
+                150109000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1086,7 +3030,13 @@
         "comment": "OA6DXV | PERU WebSDR | Arequipa",
         "url": "http://websdr.republicaoa6.com:8091/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6588500,
+                7612500
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1096,8 +3046,42 @@
         "lon": -111.792,
         "comment": "Northern Utah WebSDR - Salt Lake metro area VHF/UHF",
         "url": "http://slc2meters.sdrutah.org:8901/",
-        "users": 1,
-        "device": "WebSDR"
+        "users": 0,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                145708000,
+                146092000
+            ],
+            [
+                143976000,
+                146024000
+            ],
+            [
+                145986000,
+                148034000
+            ],
+            [
+                121076000,
+                123124000
+            ],
+            [
+                445988000,
+                448036000
+            ],
+            [
+                447988000,
+                450036000
+            ],
+            [
+                49988000,
+                51012000
+            ],
+            [
+                435516000,
+                436284000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1108,7 +3092,13 @@
         "comment": "10 GHz websdr @ 60m agl",
         "url": "http://websdr.pi2ehv.ampr.org:8901/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                10368000000,
+                10369000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1118,8 +3108,18 @@
         "lon": 23.4583,
         "comment": "WebSDR by LZ7AA based on NooElec nano on upper UHF bands",
         "url": "http://websdr.info:8902/",
-        "users": 3,
-        "device": "WebSDR"
+        "users": 2,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ],
+            [
+                437976000,
+                440024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1129,8 +3129,18 @@
         "lon": 37.5417,
         "comment": "This is a WebSDR receiver, located North-East, Moscow |10M band repeaters|",
         "url": "http://ub3aww.ru:8888/",
-        "users": 0,
-        "device": "WebSDR"
+        "users": 1,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                27976000,
+                30024000
+            ],
+            [
+                25776000,
+                27824000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1140,8 +3150,14 @@
         "lon": 22.4583,
         "comment": "SV2YJ PhantomSDR+ Alexandria GR",
         "url": "http://hamradio.sv2yj.live:9002/",
-        "users": 3,
-        "device": "WebSDR"
+        "users": 4,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                28000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1152,7 +3168,29 @@
         "comment": "Central Germany (test site - not always available due to re-build)",
         "url": "http://websdr.viewdns.net:8073/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                26476000,
+                28524000
+            ],
+            [
+                49982000,
+                51518000
+            ],
+            [
+                143976000,
+                146024000
+            ],
+            [
+                435976000,
+                438024000
+            ],
+            [
+                437976000,
+                440024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1163,18 +3201,30 @@
         "comment": "LZ2KAC WEBSDR RTL2832U/R820T-Receiver",
         "url": "http://websdr.lz2kac.org:8901/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ]
+        ]
     },
     {
         "type": "latlon",
         "mode": "WebSDR",
-        "id": "us2.pitunnel.com:58491",
+        "id": "us2.pitunnel.com:47009",
         "lat": -15.7292,
         "lon": -47.7917,
         "comment": "0-30 MHz SDR, PT2FHC, Brasilia, DF, Brazil",
-        "url": "http://us2.pitunnel.com:58491/",
-        "users": 5,
-        "device": "WebSDR"
+        "url": "http://us2.pitunnel.com:47009/",
+        "users": 7,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                0,
+                30000000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1184,8 +3234,14 @@
         "lon": 23.7083,
         "comment": "Websdr by SV0XBS in Athens GREECE with RTL receiver.",
         "url": "http://sv0xbs.ddns.net:8901/",
-        "users": 0,
-        "device": "WebSDR"
+        "users": 1,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                473000,
+                2009000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1196,7 +3252,13 @@
         "comment": "Receptor SDR Louveira - Louveira, SP - Brasil",
         "url": "http://sdrlouvetel.com.br/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                26476000,
+                28524000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1207,7 +3269,21 @@
         "comment": "Receptor SDR de CE5AUC en Laja, Chile",
         "url": "http://link.radiopaulafm.com:20002/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6488000,
+                7512000
+            ],
+            [
+                26965000,
+                29013000
+            ],
+            [
+                146588000,
+                147612000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1218,7 +3294,25 @@
         "comment": " http://sites.google.com/view/grimsbyradio/home ",
         "url": "http://89.242.7.86/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                26676000,
+                28724000
+            ],
+            [
+                49226000,
+                51274000
+            ],
+            [
+                143976000,
+                146024000
+            ],
+            [
+                431976000,
+                434024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1229,7 +3323,17 @@
         "comment": "Ecuador HC3 Loja Radio Club - WebSDR",
         "url": "http://sdrhc3.ddns.net:8901/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6588000,
+                7612000
+            ],
+            [
+                27188000,
+                28212000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1240,7 +3344,13 @@
         "comment": "RSP1A on six Meters from the Quiet Corner of CT ",
         "url": "http://SIXMETERSCT.DDNS.NET:20553/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                49866000,
+                50634000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1251,7 +3361,29 @@
         "comment": "GEORGIA Country, Tbilisi",
         "url": "http://sdr.ge:8901/",
         "users": 2,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ],
+            [
+                429976000,
+                432024000
+            ],
+            [
+                431976000,
+                434024000
+            ],
+            [
+                433976000,
+                436024000
+            ],
+            [
+                437976000,
+                440024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1261,8 +3393,38 @@
         "lon": 21.375,
         "comment": "Websdr by SV2CZF in Florina GREECE with Receiver receiver.",
         "url": "http://sv2czf.ddns.me:8901/",
-        "users": 3,
-        "device": "WebSDR"
+        "users": 1,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143801000,
+                145849000
+            ],
+            [
+                6982000,
+                7238000
+            ],
+            [
+                6537000,
+                6793000
+            ],
+            [
+                3572000,
+                3828000
+            ],
+            [
+                1747000,
+                2003000
+            ],
+            [
+                1502000,
+                1758000
+            ],
+            [
+                522000,
+                1546000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1272,8 +3434,14 @@
         "lon": 24.0417,
         "comment": "FAIRS WEBSDR in Lvov Ukraine",
         "url": "http://91.201.190.4:8901/",
-        "users": 0,
-        "device": "WebSDR"
+        "users": 1,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                49988000,
+                51012000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1284,7 +3452,21 @@
         "comment": "WEBSDR @ N8MDP in Cleveland, Ohio USA",
         "url": "http://n8mdp.ddns.net:8904/",
         "users": 2,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3188000,
+                4212000
+            ],
+            [
+                6688000,
+                7712000
+            ],
+            [
+                13638000,
+                14662000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1295,7 +3477,13 @@
         "comment": "Barcarena, praia do Caripi, Brasil.",
         "url": "http://sdrweb.ddns.net/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                26396000,
+                28444000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1306,7 +3494,25 @@
         "comment": "WEBSDR 10 WARC Bands run by PA0NVY",
         "url": "http://websdr.pa0nvy.nl:8901/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1707000,
+                1963000
+            ],
+            [
+                3384000,
+                3896000
+            ],
+            [
+                6962000,
+                7218000
+            ],
+            [
+                13909000,
+                14421000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1317,7 +3523,13 @@
         "comment": "ECUADOR HF WebSDR HC1AX - Raspbian Proyect HP3ICC",
         "url": "http://186.4.161.166:8091/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6588000,
+                7612000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1328,7 +3540,17 @@
         "comment": "KB5AVY WebSDR -METAIRIE LOUISIANA- Raspberry PI FUNcube Pro Rcvr 5 HF BANDS ",
         "url": "http://kb5avy.hopto.org:8901/",
         "users": -1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                7154000,
+                7346000
+            ],
+            [
+                14154000,
+                14346000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1339,7 +3561,17 @@
         "comment": "VHF / MW Receiver - Itajai - SC - Brazil",
         "url": "http://itajai.sdr.net.br:8083/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143950000,
+                145998000
+            ],
+            [
+                145998000,
+                148046000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1350,7 +3582,25 @@
         "comment": "WebSDR Panama",
         "url": "http://142.44.211.133:8091/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3138000,
+                4162000
+            ],
+            [
+                6638000,
+                7662000
+            ],
+            [
+                13663000,
+                14687000
+            ],
+            [
+                20738000,
+                21762000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1361,7 +3611,29 @@
         "comment": "70cm band WebSDR Maasbree Netherlands (low)",
         "url": "http://sdr.websdrmaasbree.nl:8908/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                429732000,
+                431268000
+            ],
+            [
+                430732000,
+                432268000
+            ],
+            [
+                431732000,
+                433268000
+            ],
+            [
+                432732000,
+                434268000
+            ],
+            [
+                433732000,
+                435268000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1372,7 +3644,21 @@
         "comment": "KFS WebSDR #2 on the Pacific coast south of San Francisco",
         "url": "http://websdr2.kfsdr.com:8902/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1804000,
+                1996000
+            ],
+            [
+                24844000,
+                25036000
+            ],
+            [
+                28953500,
+                29721500
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1383,7 +3669,13 @@
         "comment": "IS0GRB VHF 144-146 MHz WebSDR in south Sardinia, Italy (SSB DX, Local FM, Satellite traffic)",
         "url": "http://websdr.is0grb.it:8902/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                143976000,
+                146024000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1394,7 +3686,13 @@
         "comment": "IS0GRB SHF 1296-1297 MHz WebSDR in south Sardinia, Italy",
         "url": "http://websdr.is0grb.it:8903/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1295990000,
+                1297010000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1405,7 +3703,13 @@
         "comment": "G4FPH WebSDR 1 located in central England.",
         "url": "http://stafford.160m.net:8081/",
         "users": 1,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                1804000,
+                1996000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1416,7 +3720,29 @@
         "comment": "KB5AVY WebSDR -NEW ORLEANS LOUISIANA- Raspberry PI FUNcube Pro Rcvr 5 HF BANDS ",
         "url": "http://[2600:8807:50c0:b:3b0:5b9d:f87f:bc1]:8903/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                14154000,
+                14346000
+            ],
+            [
+                7134000,
+                7326000
+            ],
+            [
+                3789000,
+                3981000
+            ],
+            [
+                764000,
+                956000
+            ],
+            [
+                462088000,
+                463112000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1427,7 +3753,25 @@
         "comment": "Maxwell SDR Nordhessen, Ringgau, Germany (13HN620) ",
         "url": "http://rgg.nordhessenfunk.de/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                437976000,
+                440024000
+            ],
+            [
+                143876000,
+                145924000
+            ],
+            [
+                27936100,
+                29983900
+            ],
+            [
+                26076100,
+                28123900
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1437,8 +3781,22 @@
         "lon": -46.5417,
         "comment": "Receptor SDR de Pocos de Caldas, MG - Brazil",
         "url": "http://crapoca.websdr.com.br:8901/",
-        "users": 0,
-        "device": "WebSDR"
+        "users": 1,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3494000,
+                4006000
+            ],
+            [
+                6894000,
+                7406000
+            ],
+            [
+                27488000,
+                28512000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1449,7 +3807,13 @@
         "comment": "FunCube Pro+ installed in Radio Club La Salle, tuned to the frequency 143.050MHz radar GRAVES for use as a detector of meteors.",
         "url": "http://websdr.housing.salleurl.edu:8901/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                142934000,
+                143126000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1460,7 +3824,13 @@
         "comment": "G4FPH WebSDR 2 located in central England.",
         "url": "http://stafford.160m.net:8082/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                3589000,
+                3781000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1470,8 +3840,22 @@
         "lon": 74.5417,
         "comment": "WebSDR p.Aksuek (www.unff.kz)",
         "url": "http://vik.for-more.biz:8071/",
-        "users": 2,
-        "device": "WebSDR"
+        "users": 1,
+        "device": "WebSDR",
+        "coverage": [
+            [
+                27100000,
+                27868000
+            ],
+            [
+                6994000,
+                7186000
+            ],
+            [
+                13958000,
+                14342000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1482,7 +3866,13 @@
         "comment": "PU2SWX Poa-Sao Paulo-Brasil--&gt; fantomas &lt;--",
         "url": "http://pu2swx.ddns.net:8901/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                10489200000,
+                10490300000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1493,7 +3883,13 @@
         "comment": "CE3WAQ - 40 mts |  Santiago, Chile",
         "url": "http://websdr.ce3waq.cl:8091/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                6075600,
+                8123600
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1504,7 +3900,13 @@
         "comment": "WebSDR | EDDC2 - 7 | Dresden, Germany (test site, may not always be available)",
         "url": "http://jimjackii.no-ip.org:8091/",
         "users": 0,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                13488000,
+                14512000
+            ]
+        ]
     },
     {
         "type": "latlon",
@@ -1515,6 +3917,12 @@
         "comment": "Websdr by SV1NQZ in Aegaleo-Athens GREECE with RTL receiver.",
         "url": "http://siros1.ddns.net:8901/",
         "users": 4,
-        "device": "WebSDR"
+        "device": "WebSDR",
+        "coverage": [
+            [
+                718000,
+                1742000
+            ]
+        ]
     }
 ]
