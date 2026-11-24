@@ -17,7 +17,7 @@
         "lon": 13.30633,
         "comment": "Berlin - Lichterfelde \ud83d\ude01\ud83c\udde9\ud83c\uddea\ud83c\udde9\ud83c\uddea\ud83c\udde9\ud83c\uddea\ud83d\ude01 [DL0073SWL] OpenWebRxPlus 0-32 MHz/ 2m/ 70cm/ PMR/DAB+/ FM Broadcast \ud83d\ude01\ud83c\udde9\ud83c\uddea\ud83c\udde9\ud83c\uddea\ud83c\udde9\ud83c\uddea\ud83d\ude01",
         "url": "http://thomas0177.ddns.net:8077/",
-        "device": "OpenWebRX 1.2.130"
+        "device": "OpenWebRX 1.2.131"
     },
     {
         "type": "latlon",
@@ -27,7 +27,7 @@
         "lon": 13.306830000000001,
         "comment": "DB0SP - 145,6 MHz - Berlin - Lichterfelde \ud83d\ude01\ud83c\udde9\ud83c\uddea\ud83c\udde9\ud83c\uddea\ud83c\udde9\ud83c\uddea\ud83d\ude01 [DL0073SWL] OpenWebRxPlus \ud83d\ude01\ud83c\udde9\ud83c\uddea\ud83c\udde9\ud83c\uddea\ud83c\udde9\ud83c\uddea\ud83d\ude01",
         "url": "http://thomas0177.ddns.net:8073/",
-        "device": "OpenWebRX 1.2.130"
+        "device": "OpenWebRX 1.2.131"
     },
     {
         "type": "latlon",
@@ -177,7 +177,7 @@
         "lon": -53.331645,
         "comment": "OpenWebRX Saltonet on Salto do Lontra",
         "url": "http://sdr.saltonet.inf.br:8073/",
-        "device": "OpenWebRX 1.2.131"
+        "device": "OpenWebRX 1.2.130"
     },
     {
         "type": "latlon",
@@ -278,6 +278,16 @@
         "comment": "YB3RDW MF|HF|AirBand|VHF|UHF",
         "url": "http://yd3rdw.cloudns.asia:8073/",
         "device": "OpenWebRX 1.2.116"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
+        "id": "tecnorama.homeip.net:8095",
+        "lat": 40.6131984296148,
+        "lon": -3.71103033159163,
+        "comment": "EA4FVQ MultiBand SDR (sdr4fun.es & sdr4fun.com) as part of SDR4FUN network",
+        "url": "http://tecnorama.homeip.net:8095/",
+        "device": "OpenWebRX 1.2.0-dev"
     },
     {
         "type": "latlon",
@@ -762,6 +772,16 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
+        "id": "websdr.dynv6.net:8900",
+        "lat": -22.4757447443785,
+        "lon": -44.031605491414,
+        "comment": "WebSDR Volta Redonda - RJ",
+        "url": "http://websdr.dynv6.net:8900/",
+        "device": "OpenWebRX 1.2.131"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
         "id": "sdr.vk2.net",
         "lat": -33.87568426113783,
         "lon": 151.19770400162605,
@@ -972,6 +992,26 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
+        "id": "138.186.166.81:8073",
+        "lat": -28.330113085688403,
+        "lon": -54.280310630798326,
+        "comment": "[PY3SA]",
+        "url": "http://138.186.166.81:8073/",
+        "device": "OpenWebRX 1.2.34"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
+        "id": "websdrsan.ddns.net:8073",
+        "lat": -28.330113085688403,
+        "lon": -54.280310630798326,
+        "comment": "[PY3SA]",
+        "url": "http://websdrsan.ddns.net:8073/",
+        "device": "OpenWebRX 1.2.34"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
         "id": "watou.on4ipr.be:8076",
         "lat": 50.867920116557,
         "lon": 2.62003386020662,
@@ -1018,16 +1058,6 @@
         "comment": "13RF029",
         "url": "http://hnswerkstatt.dyndns.org:8074/",
         "device": "OpenWebRX 1.2.131"
-    },
-    {
-        "type": "latlon",
-        "mode": "OpenWebRX",
-        "id": "sdrwifi.gaialabs.ch",
-        "lat": 47.0390700080659,
-        "lon": 6.97286126193236,
-        "comment": "HB9HRL",
-        "url": "https://sdrwifi.gaialabs.ch/",
-        "device": "OpenWebRX 1.2.126"
     },
     {
         "type": "latlon",
@@ -1337,7 +1367,17 @@
         "lon": 20.745048840740704,
         "comment": "SV6SYQ's HF-VHF-UHF SDR",
         "url": "http://sv6syq.ddns.net:8073/",
-        "device": "OpenWebRX 1.2.126"
+        "device": "OpenWebRX 1.2.131"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
+        "id": "local.ir6t.com:8073",
+        "lat": 43.5323925884872,
+        "lon": 13.5257533209869,
+        "comment": "\ud83c\uddee\ud83c\uddf9\ud83d\udcfbANCONA SDR  \ud83d\udcfb\ud83c\uddee\ud83c\uddf9",
+        "url": "http://local.ir6t.com:8073/",
+        "device": "OpenWebRX 1.2.131"
     },
     {
         "type": "latlon",
@@ -1367,7 +1407,7 @@
         "lon": -114.28335024847395,
         "comment": "LLN201 @ debian11i5",
         "url": "http://runcer.ddns.net:8073/",
-        "device": "OpenWebRX 1.2.128"
+        "device": "OpenWebRX 1.2.131"
     },
     {
         "type": "latlon",
@@ -1408,16 +1448,6 @@
         "comment": "TA2OM MW, LW, HF, VHF, UHF FM Broadcasting",
         "url": "http://ta2om.ddnsfree.com:8073/",
         "device": "OpenWebRX 1.2.131"
-    },
-    {
-        "type": "latlon",
-        "mode": "OpenWebRX",
-        "id": "ea3hub.sytes.net:8073",
-        "lat": 40.990205197800115,
-        "lon": 0.9285971295404183,
-        "comment": "EA3HUB SDR HOSPITALET DE L\u00b4INFANT TARRAGONA GROUP RADIO CLUB EA3SPAIN",
-        "url": "http://ea3hub.sytes.net:8073/",
-        "device": "OpenWebRX 1.2.123"
     },
     {
         "type": "latlon",
@@ -2152,6 +2182,16 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
+        "id": "maritime.nkpa.co.uk:8073",
+        "lat": 51.473694431844116,
+        "lon": 0.07288181746124334,
+        "comment": "Maritime Radio",
+        "url": "http://maritime.nkpa.co.uk:8073/",
+        "device": "OpenWebRX 1.2.104"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
         "id": "websdr.pi6ehv.ampr.org:8073",
         "lat": 51.4657595133042,
         "lon": 5.47165437380621,
@@ -2168,6 +2208,16 @@
         "comment": "LU1XA Radio Club Rio Gallegos",
         "url": "http://138.118.215.154:8073/",
         "device": "OpenWebRX 1.2.82"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
+        "id": "sdr.sluga.eu",
+        "lat": 46.33523932247837,
+        "lon": 15.248273991306656,
+        "comment": "S50SL",
+        "url": "https://sdr.sluga.eu/",
+        "device": "OpenWebRX 1.2.131"
     },
     {
         "type": "latlon",
@@ -2418,16 +2468,6 @@
         "comment": "XE3JAC",
         "url": "http://xe3jac-openweb.zapto.org:8073/",
         "device": "OpenWebRX 1.2.119"
-    },
-    {
-        "type": "latlon",
-        "mode": "OpenWebRX",
-        "id": "81.242.146.94:8073",
-        "lat": 50.280753504071484,
-        "lon": 5.921694842140206,
-        "comment": "ONL13454  UBA",
-        "url": "http://81.242.146.94:8073/",
-        "device": "OpenWebRX 1.2.130"
     },
     {
         "type": "latlon",
@@ -2962,6 +3002,26 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
+        "id": "185.230.119.204:8073",
+        "lat": 46.9,
+        "lon": 7.24,
+        "comment": "[HB9ITR]",
+        "url": "http://185.230.119.204:8073/",
+        "device": "OpenWebRX 1.2.111"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
+        "id": "ea1ios.serveftp.com",
+        "lat": 43.53716641562759,
+        "lon": -5.648042322826474,
+        "comment": "EA1IOS (10-11-15-20-40m-VHF-UHF) OPERATIVO 9:00am-1:00am",
+        "url": "http://ea1ios.serveftp.com/",
+        "device": "OpenWebRX 1.2.96"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
         "id": "sdr01.ionic1k.net",
         "lat": 37.8260434864678,
         "lon": -122.00551673038895,
@@ -3192,6 +3252,16 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
+        "id": "hydra-cloud.synology.me:8073",
+        "lat": 50.95614,
+        "lon": 5.93151,
+        "comment": "WebSDR Merkelbeek",
+        "url": "https://hydra-cloud.synology.me:8073/",
+        "device": "OpenWebRX 1.2.126"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
         "id": "sdr01.ionic1k.net",
         "lat": 37.8260434864678,
         "lon": -122.00551673038895,
@@ -3342,11 +3412,31 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
+        "id": "sdr4.pmr.si",
+        "lat": 45.9732550806386,
+        "lon": 14.6197553509819,
+        "comment": "S54GO",
+        "url": "https://sdr4.pmr.si/",
+        "device": "OpenWebRX 1.2.131"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
         "id": "ce3mxm.radioaficion.pro",
         "lat": -33.76426320337709,
         "lon": -70.72970116148578,
         "comment": "SDR Multibandas CE3MXM",
         "url": "http://ce3mxm.radioaficion.pro/",
+        "device": "OpenWebRX 1.2.131"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
+        "id": "sdr.zikerfy.online",
+        "lat": 16.8078354,
+        "lon": -96.7592941,
+        "comment": "Zikerfy",
+        "url": "https://sdr.zikerfy.online/",
         "device": "OpenWebRX 1.2.131"
     },
     {
@@ -3482,6 +3572,16 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
+        "id": "satcom-systems.ddns.net:8073",
+        "lat": 53.38335646603124,
+        "lon": -2.2679786869505647,
+        "comment": "MIDLAND9BMI  ** WELCOME TO SATCOM-SYSTEMS **",
+        "url": "http://satcom-systems.ddns.net:8073/",
+        "device": "OpenWebRX 1.2.130"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
         "id": "sdr.hopto.org:8073",
         "lat": 48.960997865862936,
         "lon": -54.60381997070661,
@@ -3598,6 +3698,16 @@
         "comment": "<a class=\"highlight\">FurrySDR</a>",
         "url": "https://sdr.furrysdr.de/",
         "device": "OpenWebRX 1.2.125"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
+        "id": "web-888rx.ddns.net:8073",
+        "lat": 49.216,
+        "lon": 7.011,
+        "comment": "DJ9FBA",
+        "url": "http://web-888rx.ddns.net:8073/",
+        "device": "OpenWebRX 1.2.130"
     },
     {
         "type": "latlon",
@@ -3782,6 +3892,16 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
+        "id": "sdr.sv1efa-radio.com",
+        "lat": 37.92913244322806,
+        "lon": 23.63744676277247,
+        "comment": "SV1EFA",
+        "url": "https://sdr.sv1efa-radio.com/",
+        "device": "OpenWebRX 1.2.125"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
         "id": "vk5hw.duckdns.org:8073",
         "lat": -35.555882,
         "lon": 138.624007,
@@ -3802,16 +3922,6 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
-        "id": "ea1rcr.org",
-        "lat": 42.5958758770379,
-        "lon": -2.69138476530048,
-        "comment": "EA1RCR",
-        "url": "https://ea1rcr.org/",
-        "device": "OpenWebRX 1.2.125"
-    },
-    {
-        "type": "latlon",
-        "mode": "OpenWebRX",
         "id": "109.115.114.179",
         "lat": 42.43388474134617,
         "lon": 14.239575749210264,
@@ -3822,12 +3932,12 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
-        "id": "200.3.222.105:8073",
-        "lat": -33.33864750337512,
-        "lon": -60.199265956549475,
-        "comment": "LU9ERV  San Nicolas Bs.As. Argentina",
-        "url": "http://200.3.222.105:8073/",
-        "device": "OpenWebRX 1.2.2"
+        "id": "sdr.hosted.top",
+        "lat": 43.340361448567165,
+        "lon": 25.00687087719175,
+        "comment": "Spacepl",
+        "url": "https://sdr.hosted.top/",
+        "device": "OpenWebRX 1.2.131"
     },
     {
         "type": "latlon",
@@ -3932,16 +4042,6 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
-        "id": "lighttux.spdns.eu:6166",
-        "lat": 48.8830498386239,
-        "lon": 8.73786169677969,
-        "comment": "<p style=\"color: black;\">DF4IAJ - Pforzheim SDR",
-        "url": "http://lighttux.spdns.eu:6166/",
-        "device": "OpenWebRX 1.2.130"
-    },
-    {
-        "type": "latlon",
-        "mode": "OpenWebRX",
         "id": "openweb.kwolf.us",
         "lat": 33.651711406052094,
         "lon": -97.37675717638865,
@@ -4022,11 +4122,31 @@
     {
         "type": "latlon",
         "mode": "OpenWebRX",
+        "id": "sdr.zikerfy.com",
+        "lat": 16.8078354,
+        "lon": -96.7592941,
+        "comment": "Zikerfy",
+        "url": "https://sdr.zikerfy.com/",
+        "device": "OpenWebRX 1.2.131"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
         "id": "openwebrxplus.ddns.net:8073",
         "lat": 45.85576095707822,
         "lon": 8.960330724716199,
         "comment": "HB9GZS",
         "url": "http://openwebrxplus.ddns.net:8073/",
+        "device": "OpenWebRX 1.2.131"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
+        "id": "bn-rx.bluecylabs.com",
+        "lat": 21.0008471,
+        "lon": 106.2047978,
+        "comment": "XV4HT/BN",
+        "url": "https://bn-rx.bluecylabs.com/",
         "device": "OpenWebRX 1.2.131"
     },
     {
@@ -4047,16 +4167,6 @@
         "lon": 106.4561539512476,
         "comment": "XV9HM/TB",
         "url": "https://rxtb.hmpepca.com/",
-        "device": "OpenWebRX 1.2.130"
-    },
-    {
-        "type": "latlon",
-        "mode": "OpenWebRX",
-        "id": "rxhp.hmpepca.com",
-        "lat": 20.98733315167289,
-        "lon": 105.82773411156478,
-        "comment": "XV9HM",
-        "url": "https://rxhp.hmpepca.com/",
         "device": "OpenWebRX 1.2.130"
     },
     {
@@ -4088,6 +4198,16 @@
         "comment": "Pijnacker WebSDR - Ham Vhf/Uhf - ISM 868 - ADSB - Ham HF 10/20/40/80/160",
         "url": "http://websdrpijnacker.duckdns.org:8073/",
         "device": "OpenWebRX 1.2.119"
+    },
+    {
+        "type": "latlon",
+        "mode": "OpenWebRX",
+        "id": "www.iu2mch.duckdns.org",
+        "lat": 45.464805,
+        "lon": 9.094794,
+        "comment": "IU2MCH HF-VHF-UHF-Air Band",
+        "url": "http://www.iu2mch.duckdns.org/",
+        "device": "OpenWebRX 1.2.131"
     },
     {
         "type": "latlon",
